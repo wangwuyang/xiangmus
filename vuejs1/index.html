@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js购物车</title>
+    <!--响应式兼容IE9-->
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/>
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <meta name="Keywords" content="王午阳"> <!--关键词-->
+    <meta name="Description" content="王午阳">  <!--内容描述-->
+    <meta name="author" content="王午阳"> <!--作者-->
+    <link rel="stylesheet" href="wenjian/css.css">
+</head>
+<body>
+
+<div class="Fu">
+    <div class="vue1" id="vue1" v-cloak>
+        <template v-if="LieBiao.length">
+            <table>
+                <thead>
+                    <tr>
+                        <th><input id="QuanXuan" type="checkbox" @click = "ShuangHanShu1()"></th>
+                        <th></th>
+                        <th>商品名称</th>
+                        <th>商品单价</th>
+                        <th>购买数量</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(aaa,index) in LieBiao">
+                        <td><input class="XuanZe" @click = "ShiYan1()" type="checkbox"></td>
+                        <td>{{index + 1}}</td>
+                        <td>{{aaa.MingCheng}}</td>
+                        <td>{{aaa.JiaGe}}</td>
+
+                        <td>
+                            <button @click = "Jian(index)"> - </button>
+                            <span class="span1">{{aaa.ShuLiang}}</span>
+                            <button @click = "Jia(index)"> + </button>
+                        </td>
+                        <td>
+                            <button @click = "YiChu(index)">移除</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>选中部分价格为：<span class="DangQianJiaGeBF" id="DangQianJiaGeBF"> 0 </span>元</div>
+            <div id="ZongJiaBF">总价为：{{ZongJia}}元</div>
+        </template>
+        <div v-else>购物车为空</div>
+    </div>
+</div>
+
+<script src = "../../public_file/vue.min.js"></script>
+<script src="wenjian/js.js"></script>
+</body>
+</html>

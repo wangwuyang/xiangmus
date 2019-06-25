@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="年龄">
+        <p>请输入0——120之间的数字</p>
+    </div>
+
+
+<script>
+    function AjAx1(a){
+        var AJAX_1 = new XMLHttpRequest();
+        AJAX_1.open("POST","/log.php");
+        AJAX_1.setRequestHeader("ConTent-Type","text/plain;charset=UTF-8");
+        AJAX_1.send(a);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,1068 @@
+﻿*{
+    padding: 0;
+    margin: 0;
+}
+ul{list-style: none;}
+li{list-style: none;}
+a{text-decoration: none;}
+img{max-width: 100%;}
+
+
+.fu{
+    width: 100%;
+    margin:0 auto;
+    background-color: rgb(241,241,241);
+    min-width: 1170px;
+    max-width: 1366px;
+}
+.tou{
+    width: 100%;
+    height:35px;
+    background-color:rgb(245,245,245);
+}
+/*头部各种设置*/
+.tou-ul1{                                      /*第一个<ul>*/
+    display: inline-block;
+    float: left;
+    margin-left: 5%;
+
+}
+.tou li{                 /*#tou中的所有li*/
+    display: inline-block;
+    height:35px;
+    line-height:35px;
+    position: relative;
+    font-size: 12px;
+}
+.tou-ul1 a{
+    color: #666;
+    display: inline-block;
+}
+.tou .tou-ul1-a1{   /*此处加.tou是为了增加其权重 不然无法覆盖一般样式a*/
+    color: red;
+}
+.tou-ul1 a:hover{      /*#tou中的所有a:hover*/
+    color: red;
+}
+
+
+
+
+.tou-ul2{                                          /*第二个<ul>*/
+    display: inline-block;
+    float: right;
+    margin-right: 5%;
+}
+.tou-ul2 .TouYiJili{
+    padding: 0 10px;
+}
+.tou-ul2 li:after{                 /*第二个ul里li里面的小三角*/
+    content: "";
+    border-top: 4px solid #666;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    display: inline-block;
+    padding-top:2px;
+}
+.tou-ul2 .TouYiJili:hover{
+    background-color: white;
+}
+.tou-ul2 li a{
+    color: #666666;
+    display: inline-block;
+}
+.tou-ul2 li a:hover{
+    color: red;
+}
+/*二级导航栏*/
+.tou-ul2 .TouYiJili ul{            /*隐藏的二级隐藏栏*/
+    position: absolute;
+    left: 0;
+    top: 35px;
+    display:none;
+    border-bottom: 1px solid rgb(238,238,238);
+    border-left:1px solid rgb(238,238,238);
+    border-right:1px solid rgb(238,238,238);
+    padding: 10px 0 10px 0;
+    overflow: hidden;
+    z-index: 1;
+    background-color: white;
+}
+.tou-ul2 .TouYiJili:hover ul{      /*临兵斗者！万般幻境给我破！！*/
+    display:block;
+}
+.tou-ul2 .TouYiJili ul li{
+    font-size:12px;
+    padding-left: 10%;
+    display: block;
+}
+.tou-ul2 .TouYiJili ul li:hover{
+    background-color: rgb(245,245,245);
+    transition: all 0.3s ease;                  /*0.2秒后过度结束  很漂亮+实用的功能*/
+}
+.tou-ul2 li ul li:after{                                   /*由于二级导航栏里继承了一级li后的三角 所以隐藏掩盖三角*/
+    display: none;
+}
+.tou-ul2 .TouYiJili ul li a{
+    color: #666666;
+}
+
+
+/*二级导航栏的细节*/
+.tou .tou-ul2 .TouUl2Li2{
+    background-color: transparent;
+}
+.tou .tou-ul2 .TouUl2Li4{
+    background-color: transparent;
+}
+.tou-ul2-ul1{     /*第一个*/
+    width: 105%;
+}
+.tou-ul2-ul3{      /*第三个*/
+    width: 85%;
+}
+.tou-ul2-ul5{          /*第五个*/
+    width: 110%;
+}
+.tou-ul2-ul6{          /*第六个*/
+    width:90%;
+}
+
+.TouUl2Li7{
+    position: relative;
+    padding: 0 10px;
+}
+.TouUl2Li7:hover{
+    background-color: white;
+}
+.TouUl2Li7:hover > .TouWangZhanHover{
+    display: inline-block;
+}
+.TouWangZhanHover{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    z-index: 1;
+    width:1188px;
+    overflow: hidden;
+    height: 370px;
+    background-color: white;
+    border: solid 1px #eee;
+}
+.TouWangZhanHover h4{
+    font-size: 16px;
+    padding-left: 10px;
+    border-right: solid 1px #eee;
+}
+.TouWangZhanHover .TouWZHLi1{
+    float: left;
+    width: 25%;
+}
+.TouWZHLi1 ul{
+    overflow: hidden;
+    padding: 0 10px;
+    border-right: solid #eee 1px;
+}
+.TouWZHLi1 ul li{
+    float: left;
+    height: 30px;
+}
+.TouWZHLi1 ul li a{
+    margin-top: 5px;
+    height: 25px;
+    line-height:25px;
+    padding: 0 8px;
+    transition: .2s;
+}
+.TouWZHLi1 ul li a:hover{
+    color:white;
+    transition: .3s;
+}
+/*第一个*/
+.TouWZHLi1-1 ul li{
+    width:25%;
+}
+.TouWZHLi1-1 ul li a:hover{
+    background-color: rgb(255,85,0);
+}
+.TouWZHLi1-1 h4{
+    color: rgb(255,85,0);
+}
+/*第二个*/
+.TouWZHLi1-2 ul li{
+    width:33%;
+}
+.TouWZHLi1-2 ul li a:hover{
+    background-color: rgb(159,184,56);
+}
+.TouWZHLi1-2 h4{
+    color: rgb(159,184,56);
+}
+/*第三个*/
+.TouWZHLi1-3 ul li{
+    width:33%;
+}
+.TouWZHLi1-3 ul li a:hover{
+    background-color: rgb(215,86,150);
+}
+.TouWZHLi1-3 h4{
+    color: rgb(215,86,150);
+}
+/*第四个*/
+.TouWZHLi1-4 ul li{
+    width:50%;
+}
+.TouWZHLi1-4 ul li a:hover{
+    background-color: rgb(46,159,219);
+}
+.TouWZHLi1-4 h4{
+    color: rgb(46,159,219);
+    border: none;
+}
+.TouWZHLi1-4 ul{
+    border: none;
+}
+
+
+
+
+
+/*颈部各种设置*/
+#jing{
+    height: 165px;
+    background-color: rgb(255,255,255);
+    padding: 0 80px;
+    position: relative;
+}
+.jing-img1{
+    position: absolute;
+    top: 45px;
+    left: 100px;;
+}
+/*搜索部分*/
+.souSuo{display: inline-block;margin: 20px 0 0 240px;}
+.souSuo li{display: inline-block;}
+
+#souSuo1{width: 200px;height:25px;}
+#souSuo1 li{width:50px;height: 25px;line-height: 25px;color: red;font-size: 14px;float: left;text-align: center;cursor: pointer;}
+#souSuo1 .souSuoLiang{background-color:red;color: white;font-weight: 700;}
+#souSuo1 li:hover{background-color:rgb(220,220,220);}       /*为什么会覆盖原本的颜色？*/
+
+.souSuo2Shang form{display:inline-block;position: relative;float: left}
+.souSuo2ShangDiv1{display:inline-block;width:574px;height: 40px;background-color: red;}
+.souSuo2ShangDiv1 div{padding: 3px 0 3px 3px;}
+.souSuo2ShangDiv1 input{width: 452px;height: 22px;outline:0;border: none; padding: 6px 0;}
+.souSuo2ShangDiv2{position: absolute;top: 0;right:0;}
+.souSuo2ShangDiv2 button{
+    background-color: red;width:122px;height:40px;line-height:40px;
+    border: none;font-weight:700;color:white;font-size:16px;cursor: pointer;}
+.souSuo2Shang span{width: 30px;height: 40px;display: inline-block;margin:0 0 0 10px}
+.souSuo2Shang span a{color: #666;font-size: 14px;}
+.souSuo2Shang span a:hover{color: red;}
+
+.souSuo2Xia ul{margin: 10px 0 0 0;}
+.souSuo2Xia a{font-size: 14px;color:#666;}
+.souSuo2Xia a:hover{color: red;}
+.souSuoYinCang{display: none;}
+
+
+
+
+
+/*手机淘宝部分*/          /*未完成*/
+#shoujitaobao{
+    display: inline-block;
+    float: right;
+    margin: 20px 0 0 0;
+    position: relative;
+}
+#shoujitaobao-guanbi{
+    position: absolute;
+    top: 5px;
+    left: -15px;
+}
+
+
+
+
+
+/*颈-下-*/
+.jingXia{
+    position: absolute;
+    left:300px;
+    top: 130px;
+}
+.jingXia ul{
+    display: inline-block;
+}
+.jingXia li{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+}
+.jingXia a{
+    display: inline-block;
+    font-weight: 700;
+}
+/*ie8以下不支持nth-child*/
+.jingXia ul:nth-child(1) a{
+    color:red;
+    font-size: 18px;
+    padding: 0 5px 0 5px;
+}
+.jingXia ul:nth-child(3) a,.jingXia ul:nth-child(5) a{
+    color: black;
+    font-size: 14px;
+    padding: 0 5px 0 5px;
+}
+.jingXia ul a:hover{
+    background-color: red;
+    color: white;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*主体部分*/
+.zhutiwai{
+    width: 95%;
+    margin:0 auto;
+    position: relative;
+
+}
+
+
+/*主体外 上方 浮动状态 的divfu*/
+.zhuTiWaiShangFixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 7px 0;
+    background-color:white;
+    display: none;
+    z-index: 2;
+}
+.ZTWSFDivFu{
+    width: 1190px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+.ZTWSFDiv1{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.ZTWSFDiv1 a{
+    display: inline-block;
+    overflow: hidden;
+}
+.ZTWSFDiv1 img{
+    float: left;
+}
+.ZTWSFDiv2{
+    display: inline-block;
+    background-color:rgb(255,85,0);
+    /*overflow: hidden;*/   /*照顾div2Div1 div p中的hover 不能用overflow清除浮动*/
+}
+
+
+
+/*zhuTiWai > shangfixed > divfu > div2 > div1的設置*/
+.ZTWSFDiv2Div1{
+    padding: 3px 0 3px 3px;
+    /*overflow: hidden;*/           /*照顾div2Div1 div p中的hover 不能用overflow清除浮动*/
+    float: left;
+}
+.ZTWSFDiv2Div1 div,.ZTWSFDiv2Div1 form{
+    float: left;
+}
+
+
+/*div的設置*/
+.ZTWSFDiv2Div1 div{
+    cursor: pointer;        /*鼠标悬停时的样子为链接样式*/
+    position: relative;
+}
+.ZTWSFDiv2Div1 div p{
+    display: none;
+}
+.ZTWSFDiv2Div1 div span{
+    padding-top:4px;
+    width: 73px;
+    display: block;
+    text-align: center;
+    background-color: rgb(246,246,246);
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: red;
+}
+.ZTWSFDiv2Div1 div p:nth-child(1){            /*第1個P顯示*/
+    display: block;
+}
+.ZTWSFDiv2Div1 div p:nth-child(1) span{
+    color: black;
+}
+.ZTWSFDiv2Div1 div p:nth-child(2){
+    position: absolute;
+    left: 0;
+    top: 28px;
+}
+.ZTWSFDiv2Div1 div:hover p:nth-child(2){
+    display: block;
+}
+
+
+
+
+
+
+/*input的設置*/
+.ZTWSFDiv2Div1 input{
+    padding: 6px 0 0 0;
+    width:472px;
+    height: 22px;
+    line-height: 22px;
+    text-indent: 10px;      /*首行缩进10px*/
+    border: none;
+    outline:0;          /*获得焦点时不要那层不知道叫什么的边框*/
+    font-size: 12px;
+    color: rgb(140,140,140);
+}
+
+
+
+/*zhuTiWai > shangfixed > divfu > div2 > div2的設置*/
+.ZTWSFDiv2Div2{
+    float: left;
+}
+/*button的設置*/
+.ZTWSFDiv2Div2 button{
+    width: 122px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    background: rgb(255,66,0);
+    border: none;
+    outline: 0;             /*获得焦点时不要那层不知道叫什么的边框*/
+    cursor: pointer;        /*鼠标悬停时的样子为链接样式*/
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+}
+.ZTWSFDiv2Div2 button:hover{
+    background: rgb(245,43,0);
+}
+
+
+
+
+/*页面最右边的fixed设置*/
+.ZhuTiWaiYouFixed{
+    position:absolute;
+    top: 300px;
+    right: -30px;
+}
+.ZhuTiWaiYouFixed li{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    font-size: 14px;
+}
+/*li背景颜色*/
+.ZhuTiWaiYouFixed li:nth-child(1){
+    background-image: url("../tupian/zhuTiYou/NR3/fixed1.png");
+}
+.ZhuTiWaiYouFixed li:nth-child(2){
+    background-image: url("../tupian/zhuTiYou/NR3/fixed2.png");
+}
+.ZhuTiWaiYouFixed li:nth-child(3){
+    background-image: url("../tupian/zhuTiYou/NR3/fixed3.png");
+}
+.ZhuTiWaiYouFixed li:nth-child(4){
+    background-image: url("../tupian/zhuTiYou/NR3/fixed4.png");
+}
+.ZhuTiWaiYouFixed li:nth-child(5){
+    background-image: url("../tupian/zhuTiYou/NR3/fixed5.png");
+}
+.ZhuTiWaiYouFixed li:nth-child(6){
+    background-image: url("../tupian/zhuTiYou/NR3/fixed6.png");
+}
+.ZhuTiWaiYouFixed li:nth-child(7),.ZhuTiWaiYouFixed li:nth-child(8),.ZhuTiWaiYouFixed li:nth-child(9){
+    background-color: red;
+}
+/*a設置*/
+.ZhuTiWaiYouFixed li a{
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+}
+/*a字體顔色*/
+.ZhuTiWaiYouFixed li:nth-child(1) a{
+    color: rgb(255,68,0);
+}
+.ZhuTiWaiYouFixed li:nth-child(2) a{
+    color: rgb(255,0,85);
+}
+.ZhuTiWaiYouFixed li:nth-child(3) a{
+    color: rgb(141,122,251);
+}
+.ZhuTiWaiYouFixed li:nth-child(4) a{
+    color: rgb(168,192,1);
+}
+.ZhuTiWaiYouFixed li:nth-child(5) a{
+    color: rgb(162,116,91);
+}
+.ZhuTiWaiYouFixed li:nth-child(6) a{
+    color: rgb(255,68,0);
+}
+
+.ZhuTiWaiYouFixed li a:hover{
+    background-color: transparent;
+    transition: .3s;
+    color: white;
+}
+.ZhuTiWaiYouFixed li a:hover strong{
+    border-top: solid 1px transparent;
+}
+.ZhuTiWaiYouFixed li a:hover p{
+    border-top: solid 1px transparent;
+}
+
+
+/*strong設置*/
+.ZhuTiWaiYouFixed li strong,.ZhuTiWaiYouFixed li p{
+    display:inline-block;
+    padding: 10px 0 0 0;
+    height: 40px;
+    line-height: 30px;
+    border-top: solid 1px rgb(239,239,239);
+}
+/*IE8之前的版本不支持nth-child*/
+.ZhuTiWaiYouFixed li:nth-child(1) strong,.ZhuTiWaiYouFixed li:nth-child(6) strong,.ZhuTiWaiYouFixed li:nth-child(9) strong{
+    line-height: 17px;
+}
+.ZhuTiWaiYouFixed li:nth-child(1) p,.ZhuTiWaiYouFixed li:nth-child(6) p,.ZhuTiWaiYouFixed li:nth-child(9) p{
+    line-height: 17px;
+}
+
+
+
+
+
+/*主体部分：主体（主体1、主体2、主体3、主体4.。。。）*/
+#zhuti{
+    background-color:rgb(241,241,241);
+    width: 900px;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+}
+
+
+/*主体部分的最上方部分*/
+.zhuti1{
+    display: inline-block;
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+
+
+
+/*主体最上方部分的左方部分——主题市场*/
+.zhuti1-zuo{
+    color: white;
+    background-color: rgb(255,101,55);        /*li:hover249 74 20*/
+    width:190px;
+    position:relative;
+    display: inline-block;
+    float: left;
+}
+/*主题上方左方的题目部分*/
+.zhuti1-zuo-timu{
+    position: absolute;
+    top: -33px;
+    left: 0;
+    width: 190px;
+    height:33px;
+    background-color: rgb(255,101,55);
+}
+.zhuti1-zuo-timu h3{
+    color: white;
+    padding: 10px 0 0 10px;
+}
+
+
+/*主题1-左边-ul部分*/
+.zhuti1-zuo-ul1 li{
+    padding-left: 10px;
+    height: 30px;line-height: 30px;
+    overflow: hidden;
+}
+.zhuti1-zuo-ul1 li i{float: left;   margin-top: 4px;}
+.zhuti1-zuo-ul1 span{
+    float: left;
+}
+.zhuti1-zuo-ul1 li a{
+    display: inline-block;
+
+    height: 14px;
+
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+.zhuti1-zuo-ul1 li:hover{
+    background-color: red;
+    transition: all 1.4s;
+}
+.zhuti1-zuo-ul1 li:hover i{
+    color:white;
+    transition: all .3s;
+}
+.zhuti1-zuo-ul1 a:hover{
+    text-decoration: underline;
+    transition: .3s;
+}
+
+.zhuti1-zuo:hover .zhuTi1ZuoXiangXi{
+    display:block;
+}
+
+
+
+/*主体1-左的详细hover后内容部分*/
+.zhuTi1ZuoXiangXi{
+    position: absolute;
+    right: -702px;
+    top: 0;
+    z-index: 1;
+    display:none;
+    background-color:white;
+    border: solid 2px red;
+}
+.zhuTi1ZuoXiangXi > .zhuTi1ZuoXiaoYe{
+    padding-left: 20px;
+    margin: 1px 1px 0 0;
+    display: none;
+}
+.ZT1ZXYdiv1,.ZT1ZXYdiv2{
+    float: left;
+}
+.zhuTi1ZuoXiaoYe .ZT1ZXYdiv1{
+    width: 427px;
+    padding: 25px 10px 0 0;
+}
+
+.ZT1ZXYdiv1 h5{
+    border-bottom: solid 1px rgb(241,241,241);
+
+}
+.ZT1ZXYdiv1 h5 img{
+    width: 28px;
+    height: 28px;
+    vertical-align:bottom;
+    padding: 0 5px;
+}
+.ZT1ZXYdiv1 h5 em{
+    color: black;
+    font-style: normal;
+    font-size: 14px;
+    font-weight:700;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+.ZT1ZXYdiv1 h5 span{
+    color: black;
+    font-weight: 400;
+    font-size: 12px;
+    float: right;
+    margin-top: 10px;
+}
+
+.ZT1ZXYdiv1 p{
+    padding: 8px 0;
+    margin-bottom: 25px;
+}
+.ZT1ZXYdiv1 p a{
+    color: rgb(102,102,102);
+    font-size: 12px;
+    margin-right: 12px;
+    display: inline-block;
+    white-space: nowrap;
+    height: 24px;
+    line-height: 24px;
+}
+.ZT1ZXYdiv1 h5 a:hover em,.ZT1ZXYdiv1 h5 a:hover span{
+    color: red;
+}
+
+.ZT1ZXYdiv2{
+    text-align: center;
+    padding: 20px 0 0 0;
+    width: 240px;
+    height: 505px;
+    background-color:rgb(244,244,244);
+}
+.ZT1ZXYdiv2 h3{
+    display: inline-block;
+    width: 114px;
+    color: black;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+}
+.ZT1ZXYdiv2 p{
+    color:rgb(180,180,180);
+    font-size: 14px;
+    padding: 10px 0 0 0;
+}
+.ZT1ZXYdiv2 img{
+    margin: 20px 0 0 0;
+    float: left;
+}
+.ZT1ZXYdiv2 div a{
+    display: inline-block;
+    position:relative;
+}
+.ZT1ZXYdiv2 div span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100px;
+    padding: 0 5px;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    color: rgb(102,102,102);
+    background-color: white;
+    opacity: 0.7;
+    font-size: 12px;
+    transition: .3s;
+}
+.ZT1ZXYdiv2 div a:hover >span{
+    color: red;
+    opacity: 1;
+    transition: .3s;
+}
+
+
+
+
+
+/*主题1-左的尾巴部分*/
+.zhuti1-zuo-weiba{
+    width:190px;
+    height:50px;
+}
+.zhuti1-zuo-weiba img{
+    width: 100%;
+    height: 100%;
+}
+
+/*主题上-左的hover部分*/
+/*
+    position: absolute;
+    left: 200px;
+    top: 0;
+    border-top: solid 1px red;
+    border-right: solid 1px red;
+    border-bottom: solid 1px red;
+    width: 714px;
+    height:522px;
+    background-color:white;
+    display: none;
+    */
+
+
+
+
+
+
+/*主体-1-中间*/
+.zhuti1-zhong{
+    display: inline-block;
+    float: left;
+    margin-top:15px;
+}
+.zhuti1-lunbotu{
+    display: inline-block;
+}
+
+
+
+/*******第一个轮播图 **************/
+#lunBoTu1{
+    position: relative;
+    width: 524px;
+    height:278px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 0 0 4px;
+}
+#lunBoTu1-huaBu{
+    position: absolute;
+    top: 0;
+    width:2630px;  /* (520+3+3)*5  = 2600+30    2630+1048 */
+    height:278px;
+}
+#lunBoTu1-huaBu img{
+    float: left;
+    margin: 0 2px;
+}
+/*方向*/
+.lunBoTu1-zuoYou{
+    display: none;
+    width: 25px;
+    position: absolute;
+    top: 120px;
+    background-color:rgb(163,163,163);
+    font-size: 2em;
+    text-align: center;
+    /*兼容各浏览器透明度*/
+    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+#lunBoTu1:hover .lunBoTu1-zuoYou{
+    display: inline-block;
+}
+#lunBoTu1-zuo{
+    left: 5px;
+}
+#lunBoTu1-you{
+    right: 5px;
+}
+.lunBoTu1-zuoYou:hover{
+    background-color: rgb(117,117,117);
+}
+/*圆点*/
+#lunBoTu1-yuanDianDiv{
+    position: absolute;
+    top: 240px;
+    left: 210px;
+    width: 110px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 10px;
+    background-color: #7f7276;
+}
+#lunBoTu1-yuanDianDiv span{
+    width: 12px;
+    height: 12px;
+    border: solid 1px white;
+    border-radius: 6px;
+    float: left;
+    margin: 3px 0 0 6px;
+    cursor: pointer;
+}
+#lunBoTu1-yuanDianDiv .liang{
+    background-color: red;
+}
+
+
+
+/*****两个轮播图中间的p**********/
+.zhuti1-lunbotu-span1{
+    font-weight: 700;
+    font-size: 1.2em;
+}
+.zhuti1-lunbotu-span2{
+    font-size: 0.9em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********第二个轮播图*************/
+#lunBoTu2{
+    position: relative;
+    width: 524px;
+    height: 203px;
+    overflow: hidden;
+    margin: 8px 0 0 5px;
+    display: inline-block;
+}
+#lunBoTu2HuaBu{
+    position: relative;
+    width: 4000px;
+    height: 203px;
+    display: inline-block;
+}
+#lunBoTu2HuaBu div{
+    width:530px;
+    height: 210px;
+    display: inline-block;
+    float: left;
+}
+#lunBoTu2HuaBu div img{
+    display: inline-block;
+    border: 1px solid #666666;
+    float: left;
+}
+
+.lunBoTu2ZuoYou{
+    position:absolute;
+    top: 85px;
+    font-size: 30px;
+    width: 26px;
+    text-align: center;
+    background-color: #727b7f;
+    display: none;
+    opacity: 0.7;
+}
+.lunBoTu2ZuoYou:hover{
+    opacity:0.9;
+}
+#lunBoTu2:hover .lunBoTu2ZuoYou{
+    display:inline-block;
+}
+#lunBoTu2Zuo{
+    left:0;
+}
+#lunBoTu2You{
+    right:0;
+}
+
+
+#lunBoTu2YuanDianDiv{
+    position: absolute;top: 180px;left: 200px;background-color: #9a9a9a;opacity: 0.6;
+    width: 114px;height: 20px;border-radius: 10px;
+}
+#lunBoTu2YuanDianDiv span{
+    display:inline-block;width: 10px;height:10px;border-radius: 5px;border: solid 1px white;cursor: pointer;
+    margin:4px 0 0 6px;float: left;
+}
+#lunBoTu2YuanDianDiv .lunBoTu2Liang{
+    background-color: red;
+}
+
+
+
+/*主体1——右边的广告部分*/
+.zhuti1-guanggao{
+    display: inline-block;
+    margin: 15px 5px 0 5px;
+}
+.zhuti1-guanggao h5{
+    margin: 15px 0 5px 0;
+}
+
+
+
+/*主体1——下方*/
+.zhuTi1Xia{
+    width: 100%;
+    height: 100px;
+    margin-top:10px;
+    overflow: hidden;
+}
+.zhuTi1Xia ul{
+    background-color: white;
+    overflow: hidden;
+}
+.zhuTi1Xia li{
+    width:20%;
+    padding: 5px 0;
+    float: left;
+}
+.zhuTi1Xia strong{
+    height:60px;
+    display: inline-block;
+    border-radius: 60px;
+    border: solid 1px rgb(239,239,239);
+    float: left;
+    margin-right: 5px;
+}
+.zhuTi1Xia p {
+    font-size: 12px;
+    margin: 5px 0 5px 0;
+}
+.zhuTi1Xia span{
+    display: block;
+}
+.zhuTi1Xia span img {
+    margin-left: 5px;
+}
+.zhuTi1Xia h3{
+    font-size: 14px;
+}
+.zhuTi1Xia strong:hover{
+    opacity: 0.7;
+}
+.zhuTi1Xia li:nth-child(1):hover strong{
+    border:solid 1px rgb(154,116,95);
+}
+.zhuTi1Xia li:nth-child(1) h3,.zhuTi1Xia li:nth-child(1) span,.zhuTi1Xia li:nth-child(1) p{
+    color: rgb(154,116,95);
+}
+.zhuTi1Xia li:nth-child(2):hover strong{
+    border:solid 1px rgb(129,193,143);
+}
+.zhuTi1Xia li:nth-child(2) h3,.zhuTi1Xia li:nth-child(2) span,.zhuTi1Xia li:nth-child(2) p{
+    color: rgb(129,193,143);
+}
+.zhuTi1Xia li:nth-child(3):hover strong{
+    border:solid 1px rgb(114,165,246);
+}
+.zhuTi1Xia li:nth-child(3) h3,.zhuTi1Xia li:nth-child(3) span,.zhuTi1Xia li:nth-child(3) p{
+    color: rgb(114,165,246);
+}
+.zhuTi1Xia li:nth-child(4):hover strong{
+    border:solid 1px rgb(132,111,199);
+}
+.zhuTi1Xia li:nth-child(4) h3,.zhuTi1Xia li:nth-child(4) span,.zhuTi1Xia li:nth-child(4) p{
+    color: rgb(132,111,199);
+}
+.zhuTi1Xia li:nth-child(5):hover strong{
+    border:solid 1px rgb(222,82,94);
+}
+.zhuTi1Xia li:nth-child(5) h3,.zhuTi1Xia li:nth-child(5) span,.zhuTi1Xia li:nth-child(5) p{
+    color: rgb(222,82,94);
+}
+
+
+
+
+
+
+
+
+
+

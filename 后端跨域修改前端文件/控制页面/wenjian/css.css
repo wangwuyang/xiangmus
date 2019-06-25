@@ -1,0 +1,57 @@
+/*常用css样式设置*/
+*{padding:0;margin:0;}                              /*所有元素padding和margin的默认边距设为0*/
+html{font-size: 62.5%;background-color: white;} /*默认字体大小设为原本的62.5%,即10px 背景颜色设为白色*/
+ul,li{list-style: none;}                           /*取消ul,li的默认样式：点*/
+a{text-decoration: none;display:block;}           /*取消默认样式：下划线；默认颜色设为黑色*//*使a标签变为块元素 减少html标签总量 增加DOM性能*/
+h1,h2,h3,h4,h5,h6{padding: 10px 0; text-align: center;}
+
+.WaiKe{position: relative;}
+.Fu{width:90%;margin: 0 auto;font-size: 1.6rem;min-width: 600px;}
+.Tou{padding-bottom: 50px;font-size: 2rem;}
+/*内容输入区样式*/
+.NeiRongShuRuQu{max-width: 800px;margin: 0 auto;}
+.ShuRu{width:100%;display: block;background-color: peachpuff;height: 150px;
+    font-size:2rem;padding:10px 4px;color:rgba(120,120,120,.6);
+}
+/*中间按钮样式*/
+.AnJian{max-width: 800px;margin: 0 auto;position: relative;overflow: hidden;}
+.ChuLi{padding:10px 4px;margin: 20px 0;display: inline-block;text-align: left;}
+.B2{padding:10px 4px;margin: 20px 0;display: inline-block;text-align: left;}
+
+/*内容输出区样式*/
+.NeiRongShuChuQu{position: relative;max-width: 800px;margin: 0 auto;}
+.ShuChu{width:98%;display: block;background-color: #6eb706;height: 150px;font-size:2rem;padding:10px 4px;}
+.B3{
+    position: absolute;left: 30px;top:-10px;
+    padding:10px 4px;margin: 20px 100px 20px 0;float:left;
+    background-color: black;color: white;cursor: pointer;
+}
+
+
+/*使用须知部分*/
+.ShiYongXuZhi_Tou{
+    position:absolute;left:60px;top:20px;
+    width:100px;transition: .3s;border-radius: 10px;
+    text-align:center;cursor: pointer;font-weight: 700;font-size: 2rem;
+    background-color:black;color: red;
+}
+.ShiYongXuZhi_Tou a{display: block;padding: 14px 4px;color: green;}
+.ShiYongXuZhi_Tou:hover{background-color:green;color: white;transition:.3s;opacity: .8;}
+.ShiYongXuZhi_Tou:hover a{color: white;}
+.ShiYongXuZhi_NR h3{font-weight: 700;text-align: center;margin-top: 100px;}
+.ShiYongXuZhi_NR span{padding: 20px 0;display: inline-block;}
+
+
+/*弹出的提示部分*/
+.TanChu1_WaiKe{position: fixed;width: 100%;left: 0;max-height:100px;overflow: hidden;}
+.TanChu1{
+    background-color:antiquewhite;font-size: 1.4rem;color:red;border-radius: 10px;
+    padding: 10px 20px;opacity: .8;display: inline-block;margin-left: 80%;
+}
+
+/*下拉选单1*/
+.XiaLa1BF{font-size: 1.8rem;margin: 30px 0;}
+.XiaLa1{height: 3rem;line-height: 3rem;font-size:2rem;font-family: "黑体";}
+
+.YuanChengXiuGai_B{padding: 6px 20px;font-size: 1.8rem;}
+/*.YuanChengXiuGai_B:hover{cursor: no-drop;}*/

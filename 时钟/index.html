@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <!--响应式兼容IE9-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <meta name="Keywords" content="王午阳的项目"> <!--关键词-->
+    <meta name="Description" content="王午阳的项目">  <!--内容描述-->
+    <meta name="author" content="王午阳"> <!--作者-->
+    <link rel="stylesheet" href="wenjian/css.css" />
+
+</head>
+<body>
+<div class="WaiKe">
+    <div class="Fu">
+        <article class="ABF">
+            <section class="A_WaiKe"></section>
+        </article>
+        <article class="ShiZhongBF">
+            <section class="ShiZhongWaiKe">
+                <p class="XiaoShi" id="ShiZhen"><strong></strong></p>
+                <p class="FenZhong" id="FenZhen"><strong></strong></p>
+                <p class="MiaoShu" id="MiaoZhen"><strong></strong></p>
+                <div class="YuanQuan"></div>
+                <div class="XiaoShiShuWaiKe">
+                    <ul class="XiaoShiShu">
+                        <li><p>12</p></li>
+                        <li><p>1</p></li>
+                        <li><p>2</p></li>
+                        <li><p>3</p></li>
+                        <li><p>4</p></li>
+                        <li><p>5</p></li>
+                        <li><p>6</p></li>
+                        <li><p>7</p></li>
+                        <li><p>8</p></li>
+                        <li><p>9</p></li>
+                        <li><p>10</p></li>
+                        <li><p>11</p></li>
+                    </ul>
+                </div>
+                <div class="MiaoBiaoWaiKe">
+                    <ul class="MiaoBiao">
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                    </ul>
+                </div>
+            </section>
+            <section id="ShiJianXS" class="ShiZhongXS"></section>
+        </article>
+    </div >
+</div>
+
+<script>
+    //时间显示
+    function ShiJianXS() {
+        var ShiJianXS = document.getElementById("ShiJianXS");
+        function MiaoBiao() {
+            var SJBL1 = new Date();
+            SJBL1.NianFen = SJBL1.getFullYear();
+            SJBL1.XiaoShi = SJBL1.getHours();
+            SJBL1.FenZhong = SJBL1.getMinutes();
+            SJBL1.Miao = SJBL1.getSeconds();
+            //美观化
+            SJBL1.FenZhong = MeiGuan(SJBL1.FenZhong);
+            SJBL1.Miao = MeiGuan(SJBL1.Miao);
+            ShiJianXS.innerHTML = SJBL1.NianFen+"年："+ SJBL1.XiaoShi +":"+ SJBL1.FenZhong +":"+ SJBL1.Miao;
+            setTimeout(function () {
+                MiaoBiao();
+            }, 1000);
+            function MeiGuan(CanShu1) {
+                if (CanShu1<10){
+                    CanShu1 = "0"+CanShu1;
+                }
+                return CanShu1;
+            }
+        }
+        MiaoBiao();
+
+
+    }
+
+    //钟表走动
+    function ZhongBiaoZouDong() {
+        var ShiZhen = document.getElementById("ShiZhen"),
+            FenZhen = document.getElementById("FenZhen"),
+            MiaoZhen = document.getElementById("MiaoZhen");
+        var ShiJian = new Date();
+        console.log("时间："+ShiJian);
+        ShiJian.Shi = ShiJian.getHours();
+        ShiJian.Fen = ShiJian.getMinutes();
+        ShiJian.Miao = ShiJian.getSeconds();
+
+    //    console.log(window.getComputedStyle(ShiZhen));//查看所有属性
+      //  console.log(HuoQuCSSShuXing(ShiZhen,"transform"));//查看单一属性
+      //  console.log(ShiZhen.style.webkitTransform);
+     //   console.log(ShiZhen.style.webkitTransform);
+     //   console.log(ShiZhen.style.MozTransform);
+     //   console.log(ShiZhen.style.msTransform);
+     //   console.log(ShiZhen.style.OTransform);
+      //  console.log(ShiZhen.style.transform);
+
+// 270deg等同于630deg的位置  630deg是转了一圈后的位置
+
+
+        function YunDong() {
+            //设置时钟的初始位置
+            var ChuShi = 270;
+            var MeiDu = 6;//  360/60 = 6
+            //var FenMeiDu = 0.1;   //6/60 =
+            var YunDong = {};
+            YunDong.Miao = ShiJian.Miao * 6 + ChuShi;//秒的deg度数
+            YunDong.Fen =  (ShiJian.Fen *6 + ChuShi)  + (YunDong.Miao - ChuShi)/360 * 6;//目前分钟的 deg度数 + 秒已经走过的一分钟的百分比
+            YunDong.Shi =  (ShiJian.Shi * 30 + ChuShi)  + (YunDong.Fen - ChuShi)/360 * 30;//24小时 会转两圈 也就是 到达630+360 = 990deg
+
+            //每秒移动多少deg
+            YunDong.Miao_S = 6;
+            YunDong.Fen_S  = 6/60;
+            YunDong.Shi_S = 6/3600;
+
+            MiaoZhen.style.transform = "rotate("+YunDong.Miao+"deg)";
+            FenZhen.style.transform = "rotate("+YunDong.Fen+"deg)";
+            ShiZhen.style.transform = "rotate("+YunDong.Shi+"deg)";
+
+            setInterval(function () {
+                //秒的运动轨迹
+                if(YunDong.Miao === 630){YunDong.Miao = 270;}
+                YunDong.Miao += 6;
+                MiaoZhen.style.transform = "rotate("+YunDong.Miao+"deg)";
+
+                //分的运动轨迹
+                if(YunDong.Fen === 630){YunDong.Fen = 270;}//防止数无限往上加 那样 不雅观
+              //  if(YunDong.Fen > 630){YunDong.Fen = 270;}//防误差 怎么搞下误差呢
+                YunDong.Fen += 0.1;
+                FenZhen.style.transform = "rotate("+YunDong.Fen+"deg)";
+
+                //时的运动轨迹
+                if(YunDong.Shi > 990){YunDong.Shi = 270;}//防止数无限往上加 那样 不雅观
+           //     if(YunDong.Shi > 990){YunDong.Shi = 270;}//防误差 怎么搞下误差呢
+                YunDong.Shi += (30/3600);
+                ShiZhen.style.transform = "rotate("+YunDong.Shi+"deg)";
+            },1000);
+        }
+        YunDong();
+
+    }
+
+    function HuoQuCSSShuXing(YuanSu,ShuXing) {//参数1：需要获取的元素 参数2：需要获取的css属性
+        if(window.getComputedStyle){
+            return(window.getComputedStyle(YuanSu, null)[ShuXing]);
+        }
+        else{
+            return(YuanSu.currentStyle[ShuXing]);
+        }
+    }
+
+
+    ZhongBiaoZouDong();
+    ShiJianXS();
+</script>
+</body>
+</html>

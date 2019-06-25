@@ -1,0 +1,96 @@
+/*常用css样式设置*/
+*{padding:0;margin:0;}                              /*所有元素padding和margin的默认边距设为0*/
+html{font-size: 62.5%;background-color: white;} /*默认字体大小设为原本的62.5%,即10px—方便rem单位 背景颜色设为白色*/
+ul,li{list-style: none;}                           /*取消ul,li的默认样式：点*/
+a{text-decoration: none;}           /*取消默认样式：下划线；默认颜色设为黑色*//*使a标签变为块元素 减少html标签总量 增加DOM性能*/
+h1,h2,h3,h4,h5,h6{text-align: center;}
+a{-webkit-tap-highlight-color: transparent;-webkit-touch-callout: none;-webkit-user-select: none;}/*取消a标签点击时的颜色*/
+body{background-color:rgb(188,126,104);cursor: default;}
+.QCFloat{clear:both;}/*清除浮动*/
+.XianShi{display: block;}
+
+
+.Fu{font-size: 1.6rem;color: black;background-color: white;min-width: 32rem;min-height: 240rem;margin: 0 auto;}
+/*头部部分*/
+.Tou{position: relative;background-color: #009f95;}
+.DaoHang{background-color: #009f95;width: 100%;font-size: 1.8rem;position: relative;z-index: 2;}
+.DaoHang_Zuo,.DaoHang_You{overflow: hidden;}
+.DaoHang_Zuo li,.DaoHang_You > p{float: left;padding: 1.2rem 1rem}
+
+
+.DaoHang_Zuo{float: left;margin-left: 2rem;}
+.DaoHang_Zuo li{transition: .3s;font-weight: 700;}
+.DaoHang_Zuo li:hover{background-color: red;color: white;transition: .3s}
+
+/*导航右边部分*/
+.DaoHang_You{float: right;margin-right: 5rem}
+.DaoHang_You > p{cursor: pointer;}
+
+.DaoHang_fixed{position: absolute;top:8rem;right: 4rem;}
+.DaoHang_fixed > p{display: none;color: white;}
+.DaoHang_fixed > p:nth-of-type(1){margin-right: 14rem;}
+.DaoHang_fixed > p:nth-of-type(2){margin-right: 7rem;}
+.DaoHang_fixed > p:nth-of-type(3){margin-right: 0;}
+
+
+
+.ZhuTi{position: relative;}
+
+/*淡入淡出部分*/
+.ZT_NR1{background-color: #009f95;position: relative;}
+.ZT_NR1 div {}/*position: absolute;left: 0;top: 0;*/
+.ZT_NR1 .XianShi{display: block;}
+.ZT_NR1 div img{width: 100%;}
+
+
+/*五个轮流上翻部分*/
+.ZT_NR2{position: absolute;right: 20rem;top: 35rem;overflow: hidden;}
+.ZT_NR2 div{width: 7rem;height:7rem;background-color: #009f95;float: left;margin: 0 1rem;position: relative;}
+.ZT_NR2 div p{width: 100%;height: 100%;position: absolute;left:0;}
+.ZT_NR2 div:nth-of-type(1) p{background-color: #0aba07}
+.ZT_NR2 div:nth-of-type(2) p{background-color: #333333;}
+.ZT_NR2 div:nth-of-type(3) p{background-color: #BBB5B5;}
+.ZT_NR2 div:nth-of-type(4) p{background-color: saddlebrown;}
+.ZT_NR2 div:nth-of-type(5) p{background-color: #29bde0;}
+
+
+/*视频进度条部分*/
+.ZT_ShiPinJinDu{width: 60%;margin: 10rem auto 0 auto;padding: 1rem 0;}
+.ZT_ShiPinJinDu article{padding: 2rem 0;}
+.ZT_ShiPinJinDu article p{padding:.8rem 0;background-color: white;text-align: center;}
+
+.ZT_ShiPinJinDu article p:nth-of-type(2){background-color: springgreen;overflow: hidden;position: relative;border-radius:0 1rem 1rem 0;}
+.ZT_ShiPinJinDu input {margin: 1rem;padding: .4rem;cursor:not-allowed;}
+.ZT_ShiPinJinDu article strong{width: 100%;height:.4rem;background-color: black;display: block;position: absolute;top: .6rem;}
+
+
+/*尾巴部分*/
+.Wei{padding: 1rem 0;}
+.BUG{text-align: center;}
+
+
+/*响应式*/
+@media screen and (max-width :1024px){}
+@media screen and (max-width :600px){
+    .DaoHang{font-size: 1.6rem;}
+}
+@media screen and (max-width :460px){
+    .DaoHang_Zuo{margin-left: .4rem;}
+    .DaoHang_You{margin-right: 1rem;}
+    .DaoHang_fixed{right:1rem;}
+}
+/*响应式 rem*/
+@media screen and (max-width :1024px){ html{font-size:60%;} }
+@media screen and (max-width :900px){ html{font-size:57%;} }
+@media screen and (max-width :850px){ html{font-size:54%;} }
+@media screen and (max-width :800px){ html{font-size:51%;} }
+@media screen and (max-width :750px){ html{font-size:46%;} }
+@media screen and (max-width :700px){ html{font-size:44%;} }
+@media screen and (max-width :650px){ html{font-size:40%;} }
+@media screen and (max-width :600px){ html{font-size:36%;} }
+@media screen and (max-width :550px){ html{font-size:32%;} }
+@media screen and (max-width :500px){ html{font-size:30%;} }
+@media screen and (max-width :450px){ html{font-size:28%;} }
+@media screen and (max-width :414px){ html{font-size:22%;} }
+
+

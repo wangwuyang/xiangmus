@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--响应式兼容IE9-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <meta name="Keywords" content="王午阳"> <!--关键词-->
+    <meta name="Description" content="王午阳">  <!--内容描述-->
+    <meta name="author" content="王午阳"> <!--作者-->
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div class="Fu">
+    <p>dsaaasadsadsadsadsadsaaaaadsaaasadsadsadsadsadsaaaaadsaaasadsadsadsadsadsaaaaadsaaasadsadsadsadsadsaaaaadsaaasadsadsadsadsadsaaaaa</p>
+    <canvas class="CanvasA" id="CanvasA" width="1024" height="768"></canvas>
+    <p>dsaaasadsadsadsadsadsaaaaadsaaasadsadsadsadsadsaaaaadsaaasadsadsadsadsadsaaaaadsaaasadsadsadsadsadsaaaaadsaaasadsadsadsadsadsaaaaa</p>
+</div>
+
+<script src="wenjian/ShiZhong_ShuZu.js"></script>
+<script>
+    window.onload = function () {
+        CanvasAHS();
+    };
+    function CanvasAHS() {
+        const A_Width = "1660";//canvas画布宽度
+        const A_Height = "768";//canvas画布高度
+        var ShiJian_YQ_A = [];
+        const Qiu_YanSe = ["green","yellow","black","seagreen","#29bde0","#3C78B5","#3A7EC2","#BBB5B5","#d5effc","#f0ad4e"];
+        const BanJing = 8;
+
+        var CanvasA = document.getElementById("CanvasA");
+        var CanvasA_2d = CanvasA.getContext("2d");
+        CanvasA_2d.width = A_Width;
+        CanvasA_2d.height = A_Height;
+        CanvasA_2d.fillStyle = "blue";
+        CanvasA_2d.lineWidth = "2";
+        CanvasA_2d.strokeStyle = "black";
+      //  var ShiZhong_ChangLiang1 = BanJing*13;//设置点阵间的距离用
+
+        var ShiJian_Shi_ShiWei_Xin,ShiJian_Shi_GeWei_Xin,ShiJian_Fen_ShiWei_Xin,ShiJian_Fen_GeWei_Xin,ShiJian_Miao_ShiWei_Xin,ShiJian_Miao_GeWei_Xin;//新的时间存起来用
+        var ShiJian_Shi_ShiWei_Jiu,ShiJian_Shi_GeWei_Jiu,ShiJian_Fen_ShiWei_Jiu,ShiJian_Fen_GeWei_Jiu,ShiJian_Miao_ShiWei_Jiu,ShiJian_Miao_GeWei_Jiu;//旧的时间存起来用
+
+       ShiJianHuoQu();
+        function ShiJianHuoQu() {
+
+        }
+
+        ShiJian_HuiZhi();//时间部分的绘制部分
+        setInterval(
+            function (){
+              //  ShiJian_HuiZhi();
+                ShiJian_YuanQiu();//圆球掉下去的动画部分
+                ShiJian_YuanQiu_DongHua();
+            },50
+        );
+
+
+        function ShiJian_HuiZhi() {
+            CanvasA_2d.clearRect(0,0,CanvasA_2d.canvas.width,CanvasA_2d.canvas.height);//刷新canvas画布
+            var ShiJian = new Date();
+            ShiJian.getHours(); //获取当前小时数(0-23)
+            ShiJian.getMinutes(); //获取当前分钟数(0-59)
+            ShiJian.getSeconds(); //获取当前秒数(0-59)
+            //时的十位与个位
+            var ShiJian_Shi_ShiWei = Math.floor(ShiJian.getHours()/10);//十位
+            var ShiJian_Shi_GeWei = Math.floor(ShiJian.getHours()%10);//个位
+            //分钟的十位与个位
+            var ShiJian_Fen_ShiWei = Math.floor(ShiJian.getMinutes()/10);
+            var ShiJian_Fen_GeWei = Math.floor(ShiJian.getMinutes()%10);
+            //秒的十位与个位
+            var ShiJian_Miao_ShiWei = Math.floor(ShiJian.getSeconds()/10);
+            var ShiJian_Miao_GeWei = ShiJian.getSeconds()%10;
+
+            ShiJian_Shi_ShiWei_Jiu = ShiJian_Shi_ShiWei;//十位
+            ShiJian_Shi_GeWei_Jiu = ShiJian_Shi_GeWei;//个位
+            ShiJian_Fen_ShiWei_Jiu =  ShiJian_Fen_ShiWei;
+            ShiJian_Fen_GeWei_Jiu = ShiJian_Fen_GeWei;
+            ShiJian_Miao_ShiWei_Jiu = ShiJian_Miao_ShiWei;
+            ShiJian_Miao_GeWei_Jiu = ShiJian_Miao_GeWei;
+
+            DanGeShu(ShiJian_Shi_ShiWei,Math.ceil(BanJing*5),50);
+            DanGeShu(ShiJian_Shi_GeWei,  Math.ceil(BanJing*22),50);
+            DanGeShu(10,                 Math.ceil(BanJing*39),50);//冒号位置手动设置下 不然不美观
+            DanGeShu(ShiJian_Fen_ShiWei, Math.ceil(BanJing*49),50);//与冒号保持距离
+            DanGeShu(ShiJian_Fen_GeWei,  Math.ceil(BanJing*66),50);
+            DanGeShu(10,                 Math.ceil(BanJing*83),50);//冒号位置手动设置下 不然不美观
+            DanGeShu(ShiJian_Miao_ShiWei,Math.ceil(BanJing*93),50);//与冒号保持距离
+            DanGeShu(ShiJian_Miao_GeWei, Math.ceil(BanJing*111),50);
+
+           // ShiJian_YuanQiu_HuiZhi(CanvasA_2d)
+        }
+        function DanGeShu(ShuZi,CanShu_X,CanShu_Y) {//单个电子数字的绘制，传入代表数字的参数
+            for(var i = 0;i<ShiZhong_ShuZu[ShuZi].length;i++){//ShiZhong_ShuZu[][] 三维数组 ShiZhong_ShUZu.js里存放点阵形式的数组 有7*10的和4*10的两种
+                for(var n = 0;n<ShiZhong_ShuZu[ShuZi][i].length;n++){
+                    if(ShiZhong_ShuZu[ShuZi][i][n] === 1){
+                        //HuiZhiYuanHS(XZhou,YZhou,BanJing)
+                        CanvasA_2d.fillStyle = "blue";
+                        CanvasA_2d.beginPath();////开始一段新的路径 不一定要和后面的colsePath()成对使用
+                        CanvasA_2d.arc(CanShu_X+n*(BanJing*2+1),CanShu_Y+i*(BanJing*2+1),BanJing,0,2*Math.PI,false);//绘制方式
+                        CanvasA_2d.stroke();////加不加有点区别 原因还得仔细想想
+                        //CanvasA_2d.closePath();//结束当前路径 并自动为未封闭的加上个线封上
+                        CanvasA_2d.fill();//填充首位相连内的颜色，加不加closePath()不影响填充
+                    }
+                }
+            }
+        }
+
+        function ShiJian_YuanQiu() {
+            var ShiJian2 = new Date();
+            ShiJian_Shi_ShiWei_Xin = Math.floor(ShiJian2.getHours()/10);//十位
+            ShiJian_Shi_GeWei_Xin = Math.floor(ShiJian2.getHours()%10);//个位
+            ShiJian_Fen_ShiWei_Xin =  Math.floor(ShiJian2.getMinutes()/10);
+            ShiJian_Fen_GeWei_Xin = Math.floor(ShiJian2.getMinutes()%10);
+            ShiJian_Miao_ShiWei_Xin = Math.floor(ShiJian2.getSeconds()/10);
+            ShiJian_Miao_GeWei_Xin = ShiJian2.getSeconds()%10;
+
+            //做个对比  ShiJian_HuiZhi()里的旧时间是否等于ShiJian_YuanQiu()里的新时间
+            if(ShiJian_Shi_ShiWei_Xin !== ShiJian_Shi_ShiWei_Jiu){
+                ShiJian_HuiZhi(ShiJian_Shi_ShiWei_Xin);//不等于的话 调用一次时间获取函数，并绘制
+                ShiJian_YuanQiu_ShuJu(ShiJian_Shi_ShiWei_Xin,BanJing*5,50);//然后圆球动画执行
+            }
+            if(ShiJian_Shi_GeWei_Xin !== ShiJian_Shi_GeWei_Jiu){
+                ShiJian_HuiZhi(ShiJian_Shi_GeWei_Xin);
+                ShiJian_YuanQiu_ShuJu(ShiJian_Shi_GeWei_Xin,BanJing*22,50);
+            }
+            if(ShiJian_Fen_ShiWei_Xin !== ShiJian_Fen_ShiWei_Jiu){
+                ShiJian_HuiZhi(ShiJian_Fen_ShiWei_Xin);
+                ShiJian_YuanQiu_ShuJu(ShiJian_Fen_ShiWei_Xin,BanJing*49,50);
+            }
+            if(ShiJian_Fen_GeWei_Xin !== ShiJian_Fen_GeWei_Jiu){
+                ShiJian_HuiZhi(ShiJian_Fen_GeWei_Xin);
+                ShiJian_YuanQiu_ShuJu(ShiJian_Fen_GeWei_Xin,BanJing*66,50);
+            }
+            if(ShiJian_Miao_ShiWei_Xin !== ShiJian_Miao_ShiWei_Jiu){
+                ShiJian_HuiZhi(ShiJian_Miao_ShiWei_Xin);
+                ShiJian_YuanQiu_ShuJu(ShiJian_Miao_ShiWei_Xin,BanJing*93,50);
+            }
+            if(ShiJian_Miao_GeWei_Xin !== ShiJian_Miao_GeWei_Jiu){
+                ShiJian_HuiZhi(ShiJian_Miao_GeWei_Xin);
+                ShiJian_YuanQiu_ShuJu(ShiJian_Miao_GeWei_Xin,BanJing*111,50);
+            }
+        }
+        //时间_圆球_数据部分——生成圆球所需要的数据
+        function ShiJian_YuanQiu_ShuJu(CanShu1,X,Y) {
+            for(var i = 0;i<ShiZhong_ShuZu[CanShu1].length;i++){//ShiZhong_ShuZu[][] 三维数组 ShiZhong_ShUZu.js里存放点阵形式的数组 有7*10的和4*10的两种
+                for(var n = 0;n<ShiZhong_ShuZu[CanShu1][i].length;n++){
+                    if(ShiZhong_ShuZu[CanShu1][i][n] === 1){
+                        var AAA = {
+                            x:X+n*(BanJing*2),
+                            y:Y+i*(BanJing*2),
+                            ZhongLi:2,
+                            xYunDong:Math.pow( -1 , Math.ceil( Math.random()*1000 ) ) * 4,//N次方 教程上的运动轨迹 一会看看效果
+                            yYunDong:-5,
+                            YanSe:Qiu_YanSe[Math.floor( Math.random()*Qiu_YanSe.length)]
+                        };
+                        ShiJian_YQ_A.push(AAA);//将括号里的对象添加到ShiJian_YQ_A数组里
+                    }
+                }
+            }
+        }
+
+        function ShiJian_YuanQiu_DongHua() {
+            ShiJian_YuanQiu_HuiZhi(CanvasA_2d);
+            for(var i = 0;i<ShiJian_YQ_A.length;i++){
+                ShiJian_YQ_A[i].x += ShiJian_YQ_A[i].xYunDong;
+                ShiJian_YQ_A[i].y += ShiJian_YQ_A[i].yYunDong;
+                ShiJian_YQ_A[i].yYunDong += ShiJian_YQ_A[i].ZhongLi;
+                if(ShiJian_YQ_A[i].x >=CanvasA_2d.canvas.width - BanJing){
+                    ShiJian_YQ_A[i].xYunDong = -ShiJian_YQ_A[i].xYunDong;
+                }
+                if(ShiJian_YQ_A[i].y >= CanvasA_2d.canvas.height - BanJing){
+                    ShiJian_YQ_A[i].y -= ShiJian_YQ_A[i].yYunDong;
+                    ShiJian_YQ_A[i].yYunDong = Math.ceil(-ShiJian_YQ_A[i].yYunDong*0.8);
+                }
+            }
+        }
+        function ShiJian_YuanQiu_HuiZhi(CanShu1) {
+          //  CanvasA_2d.clearRect(0,0,CanvasA_2d.canvas.width,CanvasA_2d.canvas.height);
+            for( var i=0;i<ShiJian_YQ_A.length;i++){
+                CanShu1.fillStyle=ShiJian_YQ_A[i].YanSe;
+                CanShu1.beginPath();//开始一段新的路径 不一定要和后面的colsePath()成对使用
+                CanShu1.arc( ShiJian_YQ_A[i].x , ShiJian_YQ_A[i].y ,BanJing,0, 2*Math.PI,true);//绘制圆
+                CanShu1.closePath();//结束当前路径 并自动为未封闭的加上个线封上
+                CanShu1.stroke();//加不加有点区别 原因还得仔细想想  //有了边框
+                CanShu1.fill();//填充首位相连内的颜色，加不加closePath()不影响填充
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--响应式兼容IE9-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <meta name="Keywords" content="王午阳"> <!--关键词-->
+    <meta name="Description" content="王午阳">  <!--内容描述-->
+    <meta name="author" content="王午阳"> <!--作者-->
+    <script src="https://wangwuyang.cn/public_file/vant.css"></script>
+    <style>
+        *{padding: 0;margin: 0;}
+        html{font-size: 62.5%; font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;}
+        ul > li{list-style: none}
+        ol > li{margin: 20px;}
+        h1{text-align: center;padding: 30px;}
+        h2{text-align: center;padding: 26px;color: #33CCCC;}
+        h3{text-align: center;padding: 22px;}
+        h4{text-align: center;padding: 18px;}
+        h5{text-align: center;padding: 14px;}
+        /*g布局*/
+        .g-fu{font-size: 1.6rem;}
+        .g-tou{
+            background-color: white;/*颜色渐变兼容写法*/
+            background: -webkit-linear-gradient(left,#1F2D3D,#F9FAFC); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(right,#1F2D3D,#F9FAFC); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(right,#1F2D3D,#F9FAFC); /* Firefox 3.6 - 15 */
+            background: linear-gradient(45deg,#1F2D3D,#F9FAFC); /* 标准的语法（必须放在最后）*/
+        }
+        .g-main{display: flex;justify-content: center;flex-wrap:nowrap;}
+        .g-main_left{
+            width: 20%;padding: 20px 10px;
+            background-color: white;/*颜色渐变兼容写法*/
+            background: -webkit-linear-gradient(left,#1F2D3D,#F9FAFC); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(right,#1F2D3D,#F9FAFC); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(right,#1F2D3D,#F9FAFC); /* Firefox 3.6 - 15 */
+            background: linear-gradient(45deg,#1F2D3D,#F9FAFC); /* 标准的语法（必须放在最后）*/
+        }
+        .g-main_center{
+            width:80%;
+            background-color: white;/*颜色渐变兼容写法*/
+            background: -webkit-linear-gradient(left,#9ed7cc,#F9FAFC); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(right,#9ed7cc,#F9FAFC); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(right,#9ed7cc,#F9FAFC); /* Firefox 3.6 - 15 */
+            background: linear-gradient(45deg, #9ed7cc,#F9FAFC); /* 标准的语法（必须放在最后）*/
+        }
+        .g-main_right{}
+        .g-wei{}
+
+        /*模块_头像*/
+        .m-touXiang{}
+        /*元件_头像*/
+        .u-imgFu{width: 100%;max-width: 200px;margin: 0 auto;}
+        .u-imgFu > img{display: block;width: 100%;height: 100%;}
+        .u-imgFu > p{text-align: center;padding: 20px 0;font-weight: 700;font-size: 2.4rem;}
+
+        /*模块_个人信息*/
+        .m-info{}
+        /*元件_个人信息*/
+        .u-info{padding: 20px 0 20px 10px;font-size: 1.4rem;overflow:auto}
+
+        /*模块_二维码部分*/
+        .m-erWeiMa{}
+        .m-erWeiMa > .u-imgFu{width: 80%;padding: 10px;}
+        .m-erWeiMa > .u-imgFu > p{font-size: 1.8rem;}
+
+
+        .jiaoYu > p > span{padding-right: 6px;}
+
+        .g-main_center > ul{padding: 10px;}
+
+        .biaoTi {
+            font-weight: 700;
+            background: -webkit-linear-gradient(left,red,rgb(189, 186, 191),blue); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(right,red,rgb(189, 186, 191),blue); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(right,red,rgb(189, 186, 191),blue); /* Firefox 3.6 - 15 */
+            background: linear-gradient(to right, red, #9c6081, yellow); /* 标准的语法（必须放在最后）*/
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /*元件——暗示(提示)元件*/
+        .u-hint{color:green;font-size: 1.2rem;padding: .4rem;}
+        .u-emphasis{padding: .4rem .6rem;margin: .4rem .6rem; color: white;background-color:rgba(43,58,66,1);font-size: 1.8rem;display: block;}
+        .u-preFu{padding: .4rem .6rem;margin: .4rem .6rem; color: white;background-color:rgba(43,58,66,1);font-size: 1.8rem;overflow: scroll;}
+
+
+        .red{color: red;}
+        .colorA{color: #69b072;}
+    </style>
+</head>
+<body>
+
+<div class="g-fu">
+    <header class="g-tou">
+        <h1 class="biaoTi">王钊的网页简历</h1>
+    </header>
+    <article class="g-main">
+        <div class="g-main_left">
+            <section class="m-touXiang">
+                <div class="u-imgFu">
+                    <img src="./jianli_img/touxiang.png">
+                    <p>王钊</p>
+                </div>
+            </section>
+            <section class="m-info">
+                <ul class="u-info">
+                    <li>性别：男</li>
+                    <li>年龄：25岁</li>
+                    <li>手机号：15075296687</li>
+                    <li>微信号：wang-wuyang</li>
+                    <li>邮箱：1062534243@qq.com</li>
+                    <li>个人网站:<a href="https://wangwuyang.cn">https://wangwuyang.cn</a></li>
+                </ul>
+            </section>
+            <section class="m-erWeiMa">
+                <div class="u-imgFu">
+                    <img src="jianli_img/a.png" title="二维码1" />
+                    <p><a href="../新世界">项目总览</a></p>
+                </div>
+                <div class="u-imgFu">
+                    <img src="jianli_img/a.png" title="二维码1" />
+                    <p><a href="../知识">知识总结</a></p>
+                </div>
+                <div class="u-imgFu">
+                    <img src="jianli_img/a.png" title="二维码1" />
+                    <p>其他资料</p>
+                </div>
+            </section>
+        </div>
+        <div class="g-main_center">
+            <ul>
+                <li>
+                    <h2>教育经历</h2>
+                    <div class="jiaoYu">
+                        <p><span>2013.9——2016.6</span></p>
+                        <p><span>保定职业技术学院</span><span>计算机系应用技术专业</span><span>专科</span></p>
+                    </div>
+                </li>
+                <li>
+                    <h2>工作经历</h2>
+                    <section>
+                        <h3>保定崇汇生物科技有限公司</h3>
+                        <div>
+                            <p>2017.4——2018.5</p>
+                            <h4>工作内容</h4>
+                            <span class="u-hint">公司是家规模挺大的广告运营类公司，我在分公司的技术部工作，基本上都是纯前端的工作</span>
+                            <ol>
+                                <li>负责为公司制作各种静态单页面</li>
+                                <li>负责为公司维护很多页面</li>
+                                <li>负责维护公司网站的windows(IIS)服务器</li>
+                                <li>负责将公司想要应用的新功能找到解决方案并实施</li>
+                            </ol>
+                            <h4>工作业绩</h4>
+                            <ol>
+                                <li>
+                                    前端有项任务是在服务器上更换广告页面的微信号的 规模很大 频率很高（算是插件出现前的“核心业务”），
+                                    去的时候我弄了半个多月觉得太累了，感觉可以用js简化操作，
+                                    就用js写了一个辅助脚本，方便了很多,后来其他分公司和总公司也都用上了，给发了1.5个月薪水的奖金
+                                    (结合数据库的话可以更加方便，在那时候了解了些php和数据库的相关语法，不过后来因为种种原因，就做罢了)</li>
+                                <li>公司领导经常让我弄一些新功能试验效果，每次都能实现领导想要的效果(当然现在来看，都是很简单的技术)</li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>保定鑫云医疗器械销售有限公司</h3>
+                        <div>
+                            <p>2018.9——2018.11</p>
+                            <h4>工作内容</h4>
+                            <div>
+                                是上一家公司的简化版，平常主要是做一些比较简单的广告的静态单页面，跟广告运营沟通什么的，都是些极其简单的小页面，没啥技术难度
+                            </div>
+                            <h4>工作业绩</h4>
+                            <div>
+                                满足了公司对技术的所有要求，不过太闲了，仔细算下来，一天工作时间可能连半小时也不到，
+                                过了一个月 公司为了降低支出 就商谈离职了，保持联系，由全职转为了按单收费
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>保定健鸿科技有限公司</h3>
+                        <div>
+                            <p>2018.11——2019.1</p>
+                            <h4>工作内容</h4>
+                            <div>
+                                公司很小，只有我一个前端和一个php后端进行APP的开发工作（对标的货拉拉），工期一个月，感觉有些悬，不过既然已经来了，那就做吧。
+                                1、负责公司APP的套壳开发，对美工、设计也有所涉及。
+                                2、负责写好h5页面并使用mui框架将页面转换为套壳APP。
+                                3、与公司PHP后端进行前后端不分离的接洽（此后再也不想进行不分离式的开发了）
+                            </div>
+                            <h4>工作业绩</h4>
+                            <div>
+                                我和一个PHP后端用时一个半月（需求不明+经验不足+人员不够），把安卓和苹果的APP的基础功能都制作完成了，
+                                时间有限，具体要抄什么细节上的功能项目经理还没想好，就暂且放下没做，后期招了ui，
+                                在对页面进行美观处理时被辞退（我询问经理时经理说是总经理嫌项目进展太慢了，嗯，我自己也觉得确实慢，
+                                不过…也挺无奈的，需求是我照着几个APP整理下来的，不能照抄，UI也是自己想，这里浪费了很多时间；
+                                再加上当时对框架不熟悉，用的原生js开发的，确实慢。）
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>保定市点动软件科技有限公司</h3>
+                        <div>
+                            <p>2019.1.28——今</p>
+                            <h4>工作内容</h4>
+                            <ol>
+                                <li>公司业务主要是给别人做各种定制项目，大类的话就是PC的OA系统、ERP系统，混合APP、H5、小程序;
+                                    我在公司主要负责移动h5开发、混合开发(前端开发,用js调用一些手机原生的方法)，有时候会帮同事搞下PC开发
+                                </li>
+                            </ol>
+                            <h4>工作业绩</h4>
+                            <span class="u-hint"><span class="colorA">粉色</span>：合作；<span class="red">红色</span>：独自完成；黑色：他人</span>
+                            <ol>
+                                <li>
+                                    前中期有时候会没什么工作可做，项目经理带着我们做过
+                                    <strong>OA</strong>、<strong>ERP</strong>
+                                    的两个练手项目,为以后做积累(加起来大概快两个月)
+                                </li>
+                                <li>
+                                    跟一个即将离职的前端+一个java后端一起做了个
+                                    <strong>大气尾气监测系统的一期项目</strong>
+                                    ,由PC+<span class="colorA">手机端H5</span>组成
+                                </li>
+                                <li>
+                                    <strong>大气尾气监测系统的二期</strong>
+                                    由我+一个java后端做成了PC、<span class="red">手机端H5</span>、<span class="red">安卓APP</span>三种
+                                </li>
+                                <li>
+                                    一个规模相对较大的<strong>ERP的某制造企业的管理系统</strong>项目，初期由两个前端、三个java开发，我是后期抽调进入的，
+                                    由PC端(管理系统框架基础上开发，vue-cli脚手架+element+vuejs)+<span class="colorA">vue打包成的APP</span>(vuejs+vant框架)组成
+                                    我负责<span class="colorA">改后期PC的一部分BUG</span>,
+                                    以及<span class="colorA">编写绝大部分手机端的html+css</span>，
+                                    以及<span class="colorA">手机端转序模块、审批模块</span>的开发，
+                                    我用的vue-cli脚手架 + vant框架+原生JS+git 开发；</li>
+                            </ol>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <h2>掌握技能</h2>
+                    <ol style="margin: 50px;">
+                        <li>熟练掌握h5/css3，移动+PC开发响应式开发、混合开发（apicloud） vue.js框架、vant框架、git，有较为自信的原生js能力</li>
+                        <li>掌握webpack、es6、移动套壳开发</li>
+                        <li>了解svn、element框架、iview框架、node.js、mui框架、uni-app</li>
+                        <li>有很强的实现需求能力，擅长站在用户角度想问题，很注重页面的性能的优化</li>
+                        <li>对代码的可维护性、可扩展性有了较深的了解</li>
+                        <li>举一反三 对各大框架的接受学习能力较强</li>
+                        <li>项目地址:wangwuyang.cn</li>
+                    </ol>
+                </li>
+                <li>
+                    <h2>项目经历</h2>
+                    <ol>
+                        <li>
+                            <h4>政府的尾气环境检测系统</h4>
+                            <h5>项目介绍</h5>
+                            <div>
+                                一共有两期，第一期做了PC和H5(工期近一个月)，第二期新增了APP，同时大幅完善一期的内容；(工期也是近一个月)，<br />
+                                政府环保局人员通过PC端和APP端进行管理、审批等操作,公司和车主通过H5页面进行登记、查看、编辑、生成二维码等操作;
+                            </div>
+                            <h5>人员构成与技术栈:</h5>
+                            <div>
+                                我刚来的时候跟一个即将离职的前端+一个java后端一起做了这个系统的一期项目;<br />
+                                用的是原生JS + mui框架 + vue.js ; <br />
+                                后来开始了二期开发，前端由我+大气尾气监测系统的二期由我+一个java后端一起开发;<br />
+                                我用的是APICloud框架+原生JS+vue.js+vant框架<br />
+                            </div>
+                            <h5>项目详情</h5>
+                            <div>
+                                PC是由后端通过公司基于layui的模板制作的，偶尔有问题我们前端会尽量帮忙解决;<br />
+                                APP是我用APICloud框架+vue.js + vant框架 + 原生js制作的<br />
+                                手机端H5页面是我在一期的基础上重构制作的（一期用了大量原生js，而另一个人可能是着急离职，做的也特别马虎，
+                                所以为了更方便的维护以及其他基础不好的人能看懂，就用vue大规模重构了）,
+                            </div>
+                            <h5>挑战与收获</h5>
+                            <ol>
+                                <li>之前有过OA系统和ERP系统的的练习项目，那时候边学边用APICloud，也算积累下了不少经验,不过因为小，很多东西没用到，突然多了不少新东西，查文档和应用的过程中耗费了较多的时间</li>
+                                <li>踩了一些较为深刻的坑 关于JS和手机原生之间的区别和应用场景有了较深的认知.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <h4>大洋塑料工序生产管理系统</h4>
+                            <h5>项目介绍</h5>
+                            <div></div>
+                            <h5>人员构成与技术栈:</h5>
+                            <div></div>
+                            <h5>项目详情</h5>
+                            <div></div>
+                            <h5>挑战与收获</h5>
+                            <ol>
+                                <li>这期间对vue-cli脚手架的理解和运用能力有了很大的提高，以前都是自己没事的时候手动配置webpack,对相关的理解还是比较慢的</li>
+                                <li>vue.js用的日益熟练了，经过几个项目，对可维护性、代码性能等的认知有了极大的提高</li>
+                                <li>对vant.js框架的理解和运用能力有了极大的提高，一通百通，对element框架的学习也有了很大的帮助</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+
+            <!--<section class="m-project">-->
+                <!--<h2>公司信息</h2>-->
+                <!--<div>-->
+                    <!--<p>保定点动科技有限公司</p>-->
+                    <!--<p>2019.01 —— 今</p>-->
+                    <!--<h3>项目经历</h3>-->
+                    <!--<div>-->
+                        <!--<h4>政府尾气环境检测项目</h4>-->
+                        <!--<h5>项目介绍</h5>-->
+                        <!--<p>这个项目是</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</section>-->
+        </div>
+        <div class="g-main_Right"></div>
+    </article>
+    <div class="g-wei">
+
+    </div>
+</div>
+<script src="https://wangwuyang.cn/public_file/vue.js"></script>
+<script src="https://wangwuyang.cn/public_file/vant.js"></script>
+</body>
+</html>

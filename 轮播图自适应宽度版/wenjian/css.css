@@ -1,0 +1,78 @@
+
+*{padding:0;margin:0;}                              /*所有元素padding和margin的默认边距设为0*/
+html{font-size: 62.5%;background-color: white;} /*默认字体大小设为原本的62.5%,即10px 背景颜色设为白色*/
+
+/*轮播图部分*/
+.LunBoTu{width:80%;height: 60rem; overflow:hidden;background-color:#666;position:relative;margin: 0 auto;max-width: 1500px;}
+/*画布部分*/
+.HuaBu{width:500%;height: 100%; position: absolute;left: 0;overflow: hidden;}
+.HuaBu > div{width:20%;height: 100%;float: left;}
+.HuaBu > div > img{width: 100%;height: 100%;}
+/*两个箭头部分*/
+.FangXiang_ZuoYou{
+    position: absolute;top: 40%; background-color:rgb(150,150,150); padding:1.6rem .8rem;  opacity:0.3; transition:.3s;overflow: hidden;
+    display: none;
+}
+.FangXiang_ZuoYou strong{}
+.FangXiang_Zuo{left: 4rem;}
+.FangXiang_You{right: 4rem;}
+/*下方的圆点部分*/
+.YuanDianFu{position: absolute;bottom: 2rem;left: 48%;}
+.YuanDian{position: relative;}
+.YuanDianFu span{
+    display:block;width:1.4rem;height:1.4rem;border-radius:100%;border:solid 1px #666;bottom: 0;
+    background-color:rgb(60,80,100);cursor: pointer;margin:0 0.2rem;transition: 1.2s;
+}
+.YD_Span1{position: absolute;left:-3.6rem;}
+.YD_Span2{position: absolute;left:-1.8rem;}
+.YD_Span3{}
+.YD_Span4{position: absolute;right:-1.8rem;}
+.YD_Span5{position: absolute;right: -3.6rem;}
+/*hover部分*/
+.LunBoTu:hover  .FangXiang_ZuoYou{display:block;}
+.FangXiang_ZuoYou:hover{opacity:.9; cursor:pointer;transition:.3s;background-color: rgb(0,176,80)}
+.FangXiang_ZuoYou:hover >strong{border-right-color: white;border-left-color: white;transition:.3s;}
+
+
+
+
+/*阿里巴巴矢量图库*/
+
+@font-face {font-family: "iconfont";
+    src: url('iconfont.eot?t=1517290812894'); /* IE9*/
+    src: url('iconfont.eot?t=1517290812894#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAWEAAsAAAAACHAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW7kgSY21hcAAAAYAAAABmAAABnM8Aam5nbHlmAAAB6AAAAaEAAAI8an88N2hlYWQAAAOMAAAALgAAADYQS5B1aGhlYQAAA7wAAAAcAAAAJAfeA4VobXR4AAAD2AAAABAAAAAQD+kAAGxvY2EAAAPoAAAACgAAAAoBlADKbWF4cAAAA/QAAAAfAAAAIAETAF1uYW1lAAAEFAAAAUUAAAJtPlT+fXBvc3QAAAVcAAAAJgAAADdeHrXreJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2Bk/sU4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVDxTY27438AQw9zA0AAUZgTJAQAm1AyUeJzFkMENwCAIRT9iG9N0DOOpx6YD9dQRnJg1LKAXJ/CbJ/BDxABgA8DKpUSAPhBMr7rkPuNwP+LROukJGqtkKa1NmYm8I3kW7GXasUy0bvSs0+97VLbvOtAvSu7YXqV0wD++txCbAAB4nIWPMW/TUBDH797re89pYps+J3biNHGcUD+gIVVDcAdEs7CAGCoxIXXpB2jXLAxekBgYGJkREl8ijBmyBLK6Q4ToV8hWOTwnSxaU0+l0f+l/f/0OGMDqDx3TKjjwCE7hFVwAID/GtkUaGKpBjxxjJWQVr2xR1VGh6LR79CV6bV52+/Eg8rjgNlrYxGdhP1Y9ovD54Jy8wL7bQKzV/Xfy6FDSL7hfVc2P2RvyDStB59A+f5q97g7L/ZZjjEpS1qT8bHDGDEL2bAuvPbfACvs8+85svzIOHpMASzXlv31vtury6tPgpnHkFRCTBJ16y/oxPPAPdH/wXUfWxAPTqPpm52EZR3fFqlNqRH9BF9W/JntAEyiCB0/yP0G44MVwFgGNQOlFSw54Fp9gZCMP0NU9xFgRSLMFYximKYaMZYt0mi21Lk6nWNR6mf2ecG4JfqsnIXMhLMZokhu3Du+7WxdTnYC/JmvnrRAmwTljOmGLU0JzzblhEXwDk/PQ/6H/5MLifDLLo8ScEC2+7kAnl2vzZMZzlDkSUwhc7UKHfzHLewUAAAB4nGNgZGBgAGJfAY/0eH6brwzcLAwgcG2amg2C/t/AwsDcAORyMDCBRAHqAAhpAAB4nGNgZGBgbvjfwBDDwgACQJKRARWwAABHCgJtBAAAAAPpAAAEAAAABAAAAAAAAAAAdgDKAR4AAHicY2BkYGBgYQhkYGUAASYg5gJCBob/YD4DABESAXEAeJxlj01OwzAQhV/6B6QSqqhgh+QFYgEo/RGrblhUavdddN+mTpsqiSPHrdQDcB6OwAk4AtyAO/BIJ5s2lsffvHljTwDc4Acejt8t95E9XDI7cg0XuBeuU38QbpBfhJto41W4Rf1N2MczpsJtdGF5g9e4YvaEd2EPHXwI13CNT+E69S/hBvlbuIk7/Aq30PHqwj7mXle4jUcv9sdWL5xeqeVBxaHJIpM5v4KZXu+Sha3S6pxrW8QmU4OgX0lTnWlb3VPs10PnIhVZk6oJqzpJjMqt2erQBRvn8lGvF4kehCblWGP+tsYCjnEFhSUOjDFCGGSIyujoO1Vm9K+xQ8Jee1Y9zed0WxTU/3OFAQL0z1xTurLSeTpPgT1fG1J1dCtuy56UNJFezUkSskJe1rZUQuoBNmVXjhF6XNGJPyhnSP8ACVpuyAAAAHicY2BigAAuBuyAhZGJkZmRhZGVgbGCOao0nzkyv5SBAQAYCgMdAAA=') format('woff'),
+    url('iconfont.ttf?t=1517290812894') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('iconfont.svg?t=1517290812894#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:2rem;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-Zuo:before { content: "\e624"; }
+
+.icon-You:before { content: "\e626"; }
+
+
+@media screen and (max-width :1024px){
+    .FangXiang_Zuo{left: 3rem;}
+    .FangXiang_You{right: 3rem;}
+}
+
+@media screen and (max-width :520px){
+    .YuanDianFu{bottom: 1rem;}
+    .YuanDianFu span{  width:1rem;height:1rem; } /*轮播图底部圆点设置*/
+    .YD_Span1{left:-2.8rem;}
+    .YD_Span2{left:-1.4rem;}
+    .YD_Span3{}
+    .YD_Span4{right:-1.4rem;}
+    .YD_Span5{right: -2.8rem;}
+}
+@media screen and (max-width :460px){
+    .FangXiang_Zuo{left: 2rem;}
+    .FangXiang_You{right: 2rem;}
+}
+

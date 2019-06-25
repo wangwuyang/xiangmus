@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改微信号步骤简化1.3版本</title>
+    <style>
+        /*常用css样式设置*/
+        *{padding:0;margin:0;}                              /*所有元素padding和margin的默认边距设为0*/
+        html{font-size: 62.5%;background-color: white;} /*默认字体大小设为原本的62.5%,即10px 背景颜色设为白色*/
+        ul,li{list-style: none;}                           /*取消ul,li的默认样式：点*/
+        a{text-decoration: none;display:block;}           /*取消默认样式：下划线；默认颜色设为黑色*//*使a标签变为块元素 减少html标签总量 增加DOM性能*/
+        h1,h2,h3,h4,h5,h6{padding: 10px 0; text-align: center;}
+
+
+
+        .WaiKe{position: relative;}
+        .Fu{width:90%;margin: 0 auto;font-size: 1.6rem;padding:0 0 1000px 0;min-width: 600px;}
+
+
+        .Tou{padding-bottom: 50px;font-size: 2rem;}
+        /*内容输入区样式*/
+        .NeiRongShuRuQu{max-width: 800px;margin: 0 auto;}
+        .ShuRu{width:100%;display: block;background-color: peachpuff;height: 150px;
+            font-size:2rem;padding:10px 4px;color:rgba(120,120,120,.6);
+        }
+
+
+        /*中间按钮样式*/
+        .AnJian{max-width: 800px;margin: 0 auto;position: relative;overflow: hidden;}
+        .ChuLi{padding:10px 4px;margin: 20px 0;display: inline-block;text-align: left;}
+        .B2{padding:10px 4px;margin: 20px 0;display: inline-block;text-align: left;}
+
+        /*内容输出区样式*/
+        .NeiRongShuChuQu{position: relative;max-width: 800px;margin: 0 auto;}
+        .ShuChu{width:98%;display: block;background-color: #6eb706;height: 150px;font-size:2rem;padding:10px 4px;}
+        .B3{
+            position: absolute;left: 30px;top:-10px;
+            padding:10px 4px;margin: 20px 100px 20px 0;float:left;
+            background-color: black;color: white;cursor: pointer;
+        }
+
+
+        /*使用须知部分*/
+        .ShiYongXuZhi_Tou{
+            position:absolute;left:60px;top:20px;
+            width:100px;transition: .3s;border-radius: 10px;
+            text-align:center;cursor: pointer;font-weight: 700;font-size: 2rem;
+            background-color:black;color: red;
+        }
+        .ShiYongXuZhi_Tou a{display: block;padding: 14px 4px;color: green;}
+        .ShiYongXuZhi_Tou:hover{background-color:green;color: white;transition:.3s;opacity: .8;}
+        .ShiYongXuZhi_Tou:hover a{color: white;}
+        .ShiYongXuZhi_NR h3{font-weight: 700;text-align: center;margin-top: 100px;}
+        .ShiYongXuZhi_NR span{padding: 20px 0;display: inline-block;}
+
+
+        /*弹出的提示部分*/
+        .TanChu1_WaiKe{position: fixed;width: 100%;left: 0;max-height:100px;overflow: hidden;}
+        .TanChu1{
+            background-color:antiquewhite;font-size: 1.4rem;color:red;border-radius: 10px;
+            padding: 10px 20px;opacity: .8;display: inline-block;margin-left: 80%;
+        }
+
+        /*下拉选单1*/
+        .XiaLa1BF{font-size: 1.8rem;float: right;margin: 30px 0;}
+        .XiaLa1{width: 8rem;height: 2rem;line-height: 2rem;}
+        .XL1BF_Botton{padding: 6px 20px;font-size: 1.8rem;}
+        .XL1BF_Botton:hover{cursor: no-drop;}
+
+
+    </style>
+</head>
+<body>
+    <div class="WaiKe">
+        <div class = "Fu">
+            <h1 class="Tou">修改微信号步骤简化1.3版本</h1>
+            <div class="ShiYongXuZhi_Tou">
+                <a href="#QueDian">使用须知</a>
+            </div>
+            <div class="NeiRongShuRuQu" id="NRSR">
+                <h1>内容输入区</h1>
+                <textarea class="ShuRu" id="ShuRu" name="shuru">把未处理的微信号等一大堆字复制到这里</textarea>
+            </div>
+            <div class="AnJian">
+                <input type="button" class="ChuLi" id="ChuLi" name="ChuLi"  value="点击处理输入区内容" />
+                <input type="button" class="B2" id="B2" name="b2"  value="点击清空所有内容" />
+                <article class="XiaLa1BF">
+                    <span>远程修改部分</span>
+                    <select class = "XiaLa1">
+                        <option>链接１</option>
+                        <option>链接２</option>
+                        <option>链接３</option>
+                        <option>链接４</option>
+                        <option>链接５</option>
+                        <option>链接６</option>
+                        <option>链接７</option>
+                    </select>
+                    <input type="button" class="XL1BF_Botton" value="修改">
+                </article>
+            </div>
+            <div class="NeiRongShuChuQu" id="NRSC">
+                <h1>内容输出区</h1>
+                <textarea class="ShuChu" id="ShuChu" name="ShuChu"></textarea>
+            </div>
+            <div class="ShiYongXuZhi_NR">
+                <h3 id="QueDian">缺点</h3>
+                <p>
+                    <span>1、微信号数字小于等于1位数的话会被忽略。<br /></span>
+                    <br />
+                    <span>2、为防万一 微信号后面最好加个空格</span>
+                    <br />
+                    <span>3、其它</span>
+                </p>
+                <h3>1.3更新说明</h3>
+                <p>
+                    <span>1、删除了未完成版的手动复制的功能</span><br />
+                    <span>2、添加了点击 处理输入区内容 按钮后的自动复制输出区内容的功能</span><br />
+                    <span>3、添加了复制完后右上角的提示功能</span>
+                    <span>4、修改了规则 两位数字也可以处理了</span>
+                </p>
+            </div>
+        </div>
+        <article class="TanChu1_WaiKe" id="TanChu1_WK" style="top: -100px;">
+            <div class="TanChu1">输出内容复制成功！</div>
+        </article>
+    </div>
+<script>
+    function WeiXinJianHua(){
+                //输入区
+        var ShuRu = document.getElementById("ShuRu"),
+                //处理内容按钮
+            ChuLi = document.getElementById("ChuLi"),
+                //清空内容按钮
+            QingKong = document.getElementById("B2"),
+                //输出区
+            ShuChu = document.getElementById("ShuChu"),
+                //复制按钮
+            B3 = document.getElementById("B3"),
+                //弹出功能
+            TanChu1_WK = document.getElementsByClassName("TanChu1_WaiKe")[0];
+
+        //
+        //弹出提示部分
+        function TanChuBF () {
+            //声明运算变量
+            var TCBF_1 = 50, TCBF_2 = 0, TCBF_3 = null;
+
+            var TCBF_DH = setInterval(function () {
+                //写运算方式
+                TCBF_3 = Math.ceil((TCBF_1 - TCBF_2)/20);
+                TCBF_2 += TCBF_3;
+                //将运算方式融入动画之中
+                TanChu1_WK.style.top = TCBF_2 +"px";
+                //结束动画
+                if (TCBF_2 === TCBF_1){
+                    clearInterval(TCBF_DH);
+                    setTimeout(function () {
+                        TanChu1_WK.style.top ="-100px";
+                    },2000)
+                }
+            },10);
+        }
+
+
+        //运算部分
+        ChuLi.onclick = function(){
+            var d2 = ShuRu.value.match(/\w+\d{2,6}/g);
+            //alert(d2 +"    d2[1]:"+ d2[1]);
+
+            for(var i = 0;i<d2.length;i++){
+                d2[i] = "\""+d2[i]+"\"";
+            }
+                // alert(typeof d2);/*为什么这里是对象?*/
+            var d3 = "[" + d2 + "]" + ";";//为毛webscrom里d3会警告呢？？？//为毛webStorm2017.2里连var都黄框警告呢
+                //alert(typeof d3); 这里就成了字符串呢？ why？？难道说是因为字符串+对象 进而导致d3的性质变成了字符串么？
+            ShuChu.value = d3;
+
+            //复制内容到剪贴板
+            if(ShuChu.value !== "") {
+                //var B3_A = ShuChu.value;
+                //  window.clipboardData.setData("Text","aa");
+                //  TanChuBF();
+                ShuChu.select();
+                document.execCommand("Copy");
+            }else{
+                alert("输出区无内容")
+            }
+
+            //弹出提示
+            TanChuBF();
+        };
+        QingKong.onclick = function(){
+            ShuRu.value = "";
+            ShuChu.value = "";
+        };
+        ShuRu.onclick = function(){
+            if(this.value == this.defaultValue){
+                this.value ="";
+                this.style.color ="black";
+            }
+        };
+        ShuRu.onblur = function(){
+            if (this.value == ""){
+                this.value = this.defaultValue;
+                this.style.color ="rgba(120,120,120,.6)";
+            }
+        };
+
+    }
+    WeiXinJianHua();
+    /*
+     缺点：
+     1、微信号数字小于等于2位数的话会被忽略
+     （例：ZhaoXX56 会被此程序忽略，需要自行添加，而ZhaoXX567则会正常显示）
+     2、除了微信号，不可出现其他大于等于3的数字
+     （例：f666 会出现在处理完的文本里，需要手动删除  而f66、—55、66等小于2位的则会被程序删除）
+     3、暂未发现其它问题
+     */
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

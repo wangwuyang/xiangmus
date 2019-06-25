@@ -1,0 +1,180 @@
+/*常用css样式设置*/
+*{padding:0;margin:0;}                              /*所有元素padding和margin的默认边距设为0*/
+html{font-size: 62.5%;background-color: white;} /*默认字体大小设为原本的62.5%,即10px 背景颜色设为白色*/
+ul,li{list-style: none;}                           /*取消ul,li的默认样式：点*/
+a{text-decoration: none;}           /*取消默认样式：下划线；默认颜色设为黑色*//*使a标签变为块元素 减少html标签总量 增加DOM性能*/
+h1,h2,h3,h4,h5,h6{text-align: center;}
+a{
+    /*取消a标签点击时的颜色*/
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+.qingchufudong{clear:both;}
+/*常用class设定*/
+.WaiKe{color: black;font-size: 1.6rem;background-color:rgb(188,126,104);min-width: 500px;}
+.Fu{margin: 0 auto;background-color: white;min-height: 1200px;max-height: 4000px;
+    background: -webkit-linear-gradient(left,rgba(255,255,255,1),rgba(0,0,0,1)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right,rgba(255,255,255,1),rgba(0,0,0,1)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right,rgba(255,255,255,1),rgba(0,0,0,1)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(90deg,rgba(255,255,255,1),rgba(0,0,0,1)); /* 标准的语法（必须放在最后）*/
+}
+.ABF{overflow: hidden;}
+.A_WaiKe{
+    opacity: .2;
+    width: 100px;height: 100px;background-color: white;border-radius:100%;float: left;margin:50px;
+    /*颜色渐变兼容写法*/
+    background-image: url("6.jpeg");background-size: 100%;
+    transition: 1s;
+    -moz-transition:1s; /* Firefox 4 */
+    -webkit-transition:1s; /* Safari and Chrome */
+    -o-transition:1s; /* Opera */
+
+    transform:rotate(180deg);
+    -moz-transform:rotate(180deg); /* Firefox 4 */
+    -webkit-transform:rotate(180deg); /* Safari and Chrome */
+    -o-transform:rotate(180deg); /* Opera */
+}
+.A_WaiKe:hover{
+    opacity: .8;
+    transition: 1s;
+    -moz-transition:1s; /* Firefox 4 */
+    -webkit-transition:1s; /* Safari and Chrome */
+    -o-transition:1s; /* Opera */
+
+    transform:rotate(0deg);
+    -moz-transform:rotate(0deg); /* Firefox 4 */
+    -webkit-transform:rotate(0deg); /* Safari and Chrome */
+    -o-transform:rotate(0deg); /* Opera */
+}
+
+
+.ShiZhongBF{border-radius:100%;width:50rem;height:50rem;background-image: url("6.jpeg");background-size: 100%;margin: 0 auto;}
+.ShiZhongWaiKe{
+    width:100%;height:100%; border-radius: 100%;position: relative;  opacity: 0.5;background-color: white;
+    transition: 1s;  -moz-transition:1s; /* Firefox 4 */  -webkit-transition:1s; /* Safari and Chrome */  -o-transition:1s; /* Opera */
+}
+.ShiZhongWaiKe:hover{
+    opacity: .3;
+    transition: 1s;  -moz-transition:1s; /* Firefox 4 */  -webkit-transition:1s; /* Safari and Chrome */  -o-transition:1s; /* Opera */
+}
+
+
+.XiaoShi,.FenZhong,.MiaoShu{
+    position: absolute; display: inline-block;width:100%;text-align: center;background-color:transparent;
+    transform:rotate(270deg);  -moz-transform:rotate(270deg); -webkit-transform:rotate(270deg);-o-transform:rotate(270deg);
+    transition: 0s;  -moz-transition:0s; /* Firefox 4 */  -webkit-transition:0s; /* Safari and Chrome */  -o-transition:0s; /* Opera */
+}
+.XiaoShi{height: .8rem;  top:50%;z-index: 3;margin-top: -.4rem;}
+.FenZhong{height: .6rem;  top:50%;z-index: 2;margin-top: -.3rem;}
+.MiaoShu{height: .4rem;  top:50%;z-index:1;margin-top: -.2rem;}
+
+/*父元素隐藏着，将其中半部分给个元素当作指针*/
+.XiaoShi strong,.FenZhong strong,.MiaoShu strong{
+    display:inline-block;height: 100%;float:left;margin-left: 50%;border-radius:0 50% 50% 0;
+}
+.XiaoShi strong{  opacity: .9;width: 25%;background-color: #0c72ba;}
+.FenZhong strong{  opacity: .7;width: 35%;background-color: black;  }
+.MiaoShu strong{  opacity: .5; width: 40%;background-color: red;  }
+
+
+/*指针中间的圆圈 遮挡（现实中是固定）根部用*/
+.YuanQuan{
+    width:8%;height:8%;border-radius: 100%;background-color: red;
+    position: absolute;top: 0;left:0;right:0;bottom:0;z-index: 3;margin: auto;
+}
+
+/*十二个小时的数字显示*/
+.XiaoShiShuWaiKe{position: absolute;width: 100%;height: 100%;top: 0;left: 0;}
+.XiaoShiShu{width: 100%;height: 100%;position: relative;}
+.XiaoShiShu li{width:100%;height:4rem;line-height:2.5%;font-size: 2rem; top:50%;position: absolute;text-align: right;}
+
+.XiaoShiShu li p{
+    width:4rem;height:100%;display: block;float: right;text-align: center;
+}
+.XiaoShiShu li:nth-child(1){transform:rotate(270deg);  -moz-transform:rotate(270deg); -webkit-transform:rotate(270deg);-o-transform:rotate(270deg);}
+.XiaoShiShu li:nth-child(1) p{transform:rotate(90deg);  -moz-transform:rotate(90deg); -webkit-transform:rotate(90deg);-o-transform:rotate(90deg);}
+.XiaoShiShu li:nth-child(2){  transform:rotate(300deg);  -moz-transform:rotate(300deg); -webkit-transform:rotate(300deg);-o-transform:rotate(300deg);  }
+.XiaoShiShu li:nth-child(2) p{transform:rotate(60deg);  -moz-transform:rotate(60deg); -webkit-transform:rotate(60deg);-o-transform:rotate(60deg);}
+.XiaoShiShu li:nth-child(3){  transform:rotate(330deg);  -moz-transform:rotate(330deg); -webkit-transform:rotate(330deg);-o-transform:rotate(330deg);  }
+.XiaoShiShu li:nth-child(3) p{transform:rotate(30deg);  -moz-transform:rotate(30deg); -webkit-transform:rotate(30deg);-o-transform:rotate(30deg);}
+.XiaoShiShu li:nth-child(4){  transform:rotate(360deg);  -moz-transform:rotate(360deg); -webkit-transform:rotate(360deg);-o-transform:rotate(360deg);  }
+.XiaoShiShu li:nth-child(4) p{transform:rotate(0deg);  -moz-transform:rotate(0deg); -webkit-transform:rotate(0deg);-o-transform:rotate(0deg);}
+.XiaoShiShu li:nth-child(5){  transform:rotate(390deg);  -moz-transform:rotate(390deg); -webkit-transform:rotate(390deg);-o-transform:rotate(390deg);  }
+.XiaoShiShu li:nth-child(5) p{transform:rotate(-30deg);  -moz-transform:rotate(-30deg); -webkit-transform:rotate(-30deg);-o-transform:rotate(-30deg);}
+.XiaoShiShu li:nth-child(6){  transform:rotate(420deg);  -moz-transform:rotate(420deg); -webkit-transform:rotate(420deg);-o-transform:rotate(420deg);  }
+.XiaoShiShu li:nth-child(6) p{transform:rotate(-60deg);  -moz-transform:rotate(-60deg); -webkit-transform:rotate(-60deg);-o-transform:rotate(-60deg);}
+.XiaoShiShu li:nth-child(7){  transform:rotate(450deg);  -moz-transform:rotate(450deg); -webkit-transform:rotate(450deg);-o-transform:rotate(450deg);  }
+.XiaoShiShu li:nth-child(7) p{transform:rotate(-90deg);  -moz-transform:rotate(-90deg); -webkit-transform:rotate(-90deg);-o-transform:rotate(-90deg);}
+.XiaoShiShu li:nth-child(8){  transform:rotate(480deg);  -moz-transform:rotate(480deg); -webkit-transform:rotate(480deg);-o-transform:rotate(480deg);  }
+.XiaoShiShu li:nth-child(8) p{transform:rotate(-120deg);  -moz-transform:rotate(-120deg); -webkit-transform:rotate(-120deg);-o-transform:rotate(-120deg);}
+.XiaoShiShu li:nth-child(9){  transform:rotate(510deg);  -moz-transform:rotate(510deg); -webkit-transform:rotate(510deg);-o-transform:rotate(510deg);  }
+.XiaoShiShu li:nth-child(9) p{transform:rotate(-150deg);  -moz-transform:rotate(-150deg); -webkit-transform:rotate(-150deg);-o-transform:rotate(-150deg);}
+.XiaoShiShu li:nth-child(10){  transform:rotate(540deg);  -moz-transform:rotate(540deg); -webkit-transform:rotate(540deg);-o-transform:rotate(540deg);  }
+.XiaoShiShu li:nth-child(10) p{transform:rotate(-180deg);  -moz-transform:rotate(-180deg); -webkit-transform:rotate(-180deg);-o-transform:rotate(-180deg);}
+.XiaoShiShu li:nth-child(11){  transform:rotate(570deg);  -moz-transform:rotate(570deg); -webkit-transform:rotate(570deg);-o-transform:rotate(570deg);  }
+.XiaoShiShu li:nth-child(11) p{transform:rotate(-210deg);  -moz-transform:rotate(-210deg); -webkit-transform:rotate(-210deg);-o-transform:rotate(-210deg);}
+.XiaoShiShu li:nth-child(12){  transform:rotate(600deg);  -moz-transform:rotate(600deg); -webkit-transform:rotate(600deg);-o-transform:rotate(600deg);  }
+.XiaoShiShu li:nth-child(12) p{transform:rotate(-240deg);  -moz-transform:rotate(-240deg); -webkit-transform:rotate(-240deg);-o-transform:rotate(-240deg);}
+
+/*六十个秒标志的样式 秒标*/
+.MiaoBiaoWaiKe{position: absolute;width: 100%;height: 100%;top: 0;left: 0;}
+.MiaoBiao{width: 100%;height: 100%;position: relative;}
+.MiaoBiao li{width: 100%;height: 2px;position: absolute;top:50%;overflow: hidden;margin-top: -1px;}
+.MiaoBiao li p{width:100%;height: 100%;float: left;}
+.MiaoBiao li p:before, .MiaoBiao li p:after{content: "";width:.6rem;height:100%;background-color: black;display: block;float: right;}
+.MiaoBiao li p:before{float: left;}
+.MiaoBiao li p:after{float: right;}
+
+.MiaoBiao li:nth-child(1){transform:rotate(270deg);  -moz-transform:rotate(270deg); -webkit-transform:rotate(270deg);-o-transform:rotate(270deg);}
+.MiaoBiao li:nth-child(2){transform:rotate(276deg);  -moz-transform:rotate(276deg); -webkit-transform:rotate(276deg);-o-transform:rotate(276deg);}
+.MiaoBiao li:nth-child(3){transform:rotate(282deg);  -moz-transform:rotate(282deg); -webkit-transform:rotate(282deg);-o-transform:rotate(282deg);}
+.MiaoBiao li:nth-child(4){transform:rotate(288deg);  -moz-transform:rotate(288deg); -webkit-transform:rotate(288deg);-o-transform:rotate(288deg);}
+.MiaoBiao li:nth-child(5){transform:rotate(294deg);  -moz-transform:rotate(294deg); -webkit-transform:rotate(294deg);-o-transform:rotate(294deg);}
+.MiaoBiao li:nth-child(6){transform:rotate(300deg);  -moz-transform:rotate(300deg); -webkit-transform:rotate(300deg);-o-transform:rotate(300deg);}
+.MiaoBiao li:nth-child(7){transform:rotate(306deg);  -moz-transform:rotate(306deg); -webkit-transform:rotate(306deg);-o-transform:rotate(306deg);}
+.MiaoBiao li:nth-child(8){transform:rotate(312deg);  -moz-transform:rotate(312deg); -webkit-transform:rotate(312deg);-o-transform:rotate(312deg);}
+.MiaoBiao li:nth-child(9){transform:rotate(318deg);  -moz-transform:rotate(318deg); -webkit-transform:rotate(318deg);-o-transform:rotate(318deg);}
+.MiaoBiao li:nth-child(10){transform:rotate(324deg);  -moz-transform:rotate(324deg); -webkit-transform:rotate(324deg);-o-transform:rotate(324deg);}
+.MiaoBiao li:nth-child(11){transform:rotate(330deg);  -moz-transform:rotate(330deg); -webkit-transform:rotate(330deg);-o-transform:rotate(330deg);}
+.MiaoBiao li:nth-child(12){transform:rotate(336deg);  -moz-transform:rotate(336deg); -webkit-transform:rotate(336deg);-o-transform:rotate(336deg);}
+.MiaoBiao li:nth-child(13){transform:rotate(342deg);  -moz-transform:rotate(342deg); -webkit-transform:rotate(342deg);-o-transform:rotate(342deg);}
+.MiaoBiao li:nth-child(14){transform:rotate(348deg);  -moz-transform:rotate(348deg); -webkit-transform:rotate(348deg);-o-transform:rotate(348deg);}
+.MiaoBiao li:nth-child(15){transform:rotate(354deg);  -moz-transform:rotate(354deg); -webkit-transform:rotate(354deg);-o-transform:rotate(354deg);}
+.MiaoBiao li:nth-child(16){transform:rotate(360deg);  -moz-transform:rotate(360deg); -webkit-transform:rotate(360deg);-o-transform:rotate(360deg);}
+.MiaoBiao li:nth-child(17){transform:rotate(366deg);  -moz-transform:rotate(366deg); -webkit-transform:rotate(366deg);-o-transform:rotate(366deg);}
+.MiaoBiao li:nth-child(18){transform:rotate(372deg);  -moz-transform:rotate(372deg); -webkit-transform:rotate(372deg);-o-transform:rotate(372deg);}
+.MiaoBiao li:nth-child(19){transform:rotate(378deg);  -moz-transform:rotate(378deg); -webkit-transform:rotate(378deg);-o-transform:rotate(378deg);}
+.MiaoBiao li:nth-child(20){transform:rotate(384deg);  -moz-transform:rotate(384deg); -webkit-transform:rotate(384deg);-o-transform:rotate(384deg);}
+.MiaoBiao li:nth-child(21){transform:rotate(390deg);  -moz-transform:rotate(390deg); -webkit-transform:rotate(390deg);-o-transform:rotate(390deg);}
+.MiaoBiao li:nth-child(22){transform:rotate(396deg);  -moz-transform:rotate(396deg); -webkit-transform:rotate(396deg);-o-transform:rotate(396deg);}
+.MiaoBiao li:nth-child(23){transform:rotate(402deg);  -moz-transform:rotate(402deg); -webkit-transform:rotate(402deg);-o-transform:rotate(402deg);}
+.MiaoBiao li:nth-child(24){transform:rotate(408deg);  -moz-transform:rotate(408deg); -webkit-transform:rotate(408deg);-o-transform:rotate(408deg);}
+.MiaoBiao li:nth-child(25){transform:rotate(414deg);  -moz-transform:rotate(414deg); -webkit-transform:rotate(414deg);-o-transform:rotate(414deg);}
+.MiaoBiao li:nth-child(26){transform:rotate(420deg);  -moz-transform:rotate(420deg); -webkit-transform:rotate(420deg);-o-transform:rotate(420deg);}
+.MiaoBiao li:nth-child(27){transform:rotate(426deg);  -moz-transform:rotate(426deg); -webkit-transform:rotate(426deg);-o-transform:rotate(426deg);}
+.MiaoBiao li:nth-child(28){transform:rotate(432deg);  -moz-transform:rotate(432deg); -webkit-transform:rotate(432deg);-o-transform:rotate(432deg);}
+.MiaoBiao li:nth-child(29){transform:rotate(438deg);  -moz-transform:rotate(438deg); -webkit-transform:rotate(438deg);-o-transform:rotate(438deg);}
+.MiaoBiao li:nth-child(30){transform:rotate(444deg);  -moz-transform:rotate(444deg); -webkit-transform:rotate(444deg);-o-transform:rotate(444deg);}
+
+/*60个秒标志中的十二个大标志*/
+.MiaoBiao li:nth-child(1),.MiaoBiao li:nth-child(6),.MiaoBiao li:nth-child(11),
+.MiaoBiao li:nth-child(16),.MiaoBiao li:nth-child(21),.MiaoBiao li:nth-child(26){
+    height:.4rem;
+}
+.MiaoBiao li:nth-child(1)p,.MiaoBiao li:nth-child(6)p,.MiaoBiao li:nth-child(11)p,
+.MiaoBiao li:nth-child(16)p,.MiaoBiao li:nth-child(21)p,.MiaoBiao li:nth-child(26)p{
+    width:48rem;
+}
+/*12个长的黑条*/
+.MiaoBiao li:nth-child(1) p:before,.MiaoBiao li:nth-child(6) p:before,.MiaoBiao li:nth-child(11) p:before,
+.MiaoBiao li:nth-child(16) p:before,.MiaoBiao li:nth-child(21) p:before,.MiaoBiao li:nth-child(26) p:before{
+    width: 1rem;
+}
+.MiaoBiao li:nth-child(1) p:after,.MiaoBiao li:nth-child(6) p:after,.MiaoBiao li:nth-child(11) p:after,
+.MiaoBiao li:nth-child(16) p:after,.MiaoBiao li:nth-child(21) p:after,.MiaoBiao li:nth-child(26) p:after{
+    width: 1rem;
+}
+
+
+.ShiZhongXS{text-align: center;font-size: 2rem;color: white;padding: 2rem 0;}

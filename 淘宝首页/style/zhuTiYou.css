@@ -1,0 +1,517 @@
+.YinCang{display:none;}
+
+
+
+/*主体右边的部分*/
+.zhuTiYou{
+    width: 290px;
+   /* background-color: #737f72;*/
+    display: inline-block;
+    margin-top: 15px;
+    background-color:rgb(241,241,241);
+}
+/*用户相关部分*/
+.yongHu{
+    text-align: center;
+    padding-top: 15px;
+}
+.yongHu span{
+    font-size: 12px;
+}
+
+.touXiang{
+    width: 100%;
+}
+.touXiang img{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.yongHu-p1{
+    font-size: 14px;
+    margin-bottom: 1px;
+}
+.yongHu-p2 a{
+    color: red;
+    font-size: 12px;
+    display: inline-block;
+}
+.yongHu-p2 img{
+    width: 16px;height: 16px;
+    float: left;
+    margin-top: -1px;
+}
+.yongHu-div1{
+    margin: 10px 0 15px 0;
+}
+.yongHu-div1 a{
+    background-color:rgb(255,68,0);
+    color: white;
+    padding: 5px 25px;
+    display: inline-block;
+    font-weight: 700;
+}
+.yongHu-div1 a:hover{
+    background-color: rgb(242,45,0);
+}
+
+
+/*zhuTiYou用户下面那一小片内容 起名为内容2*/
+.zhuTiYou-neiRong2{
+    background-color: white;
+}
+.zhuTiYou-neiRong2 ul{
+    padding: 9px 8px 9px 8px;
+    display: inline-block;
+    margin-right: -2px;/*使其为负 避免最后一个li因空间不足而被挤下去*/
+}
+.zhuTiYou-neiRong2 ul li{
+    margin: 0 8px;
+    float: left;
+    width: 39px;text-align:center;line-height: 22px;
+    font-size: 14px;
+    border-bottom:solid 2px white;
+}
+.zhuTiYou-neiRong2 ul li a{
+    color:black;
+}
+.zhuTiYou-neiRong2 ul li:hover{
+    transition-delay: 0.3s;/*延时0.3秒*/
+}
+.zhuTiYou-neiRong2 ul a:hover{
+    color:red;
+}
+.zhuTiYou-neiRong2 div{
+    text-align: center;
+}
+.zhuTiYou-neiRong2 div a{
+    display: inline-block;
+    font-size: 12px;
+    margin: 10px 4px 10px 4px;
+    color: black;
+}
+.zhuTiYou-neiRong2 div .NR2HongSe{
+    color: red;
+}
+
+
+
+.zhuTiYou-neiRong3{
+    position: relative;
+}
+.NR3ul1{
+    text-align: center;
+    overflow: hidden;/*清除浮动*/
+    background-color: white;
+    width: 292px;
+}
+.NR3ul1 li{
+    float: left;
+    border: solid 1px rgb(241,241,241);/*8px*/
+}
+.NR3ul1 a{
+    display: inline-block;
+    color: rgb(102,102,102);
+    padding: 10px 10px 10px 10px;
+    width: 51px;                    /*70 * 60*/
+    height: 40px;
+}
+.NR3ul1 a p{
+    font-size: 12px;
+}
+.NR3ul1 li:hover p{
+    color: red;
+}
+
+
+
+.NR3Div1{
+    width: 290px;
+    height: 160px;
+    position: absolute;
+    top:62px;
+    left: 0;
+    background-color:white;
+    border: solid 1px rgb(241,241,241);
+    border-top:none;
+    display:none;
+}
+.NR3GuanBi{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor:pointer;
+    z-index: 5;
+}
+.NR3ErJi{
+    position:relative;
+    padding: 0 15px;
+}
+.NR3ErJi .NR3ErJiul{
+    overflow: hidden;/*清除li的浮动*/
+}
+.NR3ErJi:nth-of-type(3) ul:nth-child(1) li a{
+    padding: 3px 2px;
+}
+.NR3ErJi:nth-of-type(4) ul:nth-child(1) li a{
+    padding: 3px 5px;
+}
+.NR3ErJiul li{
+    float: left;
+    font-size: 12px;
+    padding: 10px 0;
+    cursor:pointer;
+}
+.NR3ErJiul li a {
+    padding: 3px 10px;
+    display: inline-block;
+    color: rgb(102,102,102);
+}
+/*NR3“导航栏”第三级部分*/
+.NR3SanJiFu{
+    position:relative;
+    width:100%;
+    height: 120px;
+    overflow: hidden;
+}
+.NR3SanJi{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 1500px;
+    height: 110px;
+}
+.NR3SanJi div {
+    width: 290px;
+    height: 110px;
+    display: inline-block;
+    float: left;
+    position: relative;
+}
+.NR3SanJi ul{
+    position: absolute;
+    top: 50px;
+    width: 180px;
+    background-color: white;
+    display:none;
+}
+.NR3ErJi .NR3SanJi ul li{
+    background-color: white;
+    width: 90px;
+    height: 22px;
+    line-height: 22px;
+    padding:0;
+    float: left;
+    color: black;
+    font-weight: 700;
+    font-size: 16px;
+}
+.NR3SanJi ul li:hover{
+    background-color:rgb(170,170,170);
+}
+.NR3SanJi input{
+    outline:none;
+    border: solid 1px #e56592;
+    width: 180px;
+    height: 22px;
+    font-size: 14px;
+}
+.NR3SanJi input:hover{
+    border-color:#666;
+}
+.NR3SanJi span{
+    display: inline-block;
+    font-size: 14px;
+    color: red;
+    margin:5px 0;
+}
+.NR3SanJi span strong{
+    color: red;
+}
+.NR3SanJi p{
+    margin-top: 5px;
+    font-size: 14px;
+    height: 30px;
+}
+.NR3SanJi p em{
+    display: inline-block;
+    text-align: center;
+    width: 94px;
+    background-color: red;
+    line-height: 30px;
+    color:white;
+    font-weight: 700;
+    font-style: normal;
+}
+.NR3SanJi p em a{
+    display: block;
+    color: white;
+    transition: .3s;
+}
+.NR3SanJi p em a:hover{
+    background-color: #df5000;
+    transition: 0.3s;
+}
+.NR3SanJi big{
+    display: inline-block;
+}
+.NR3SanJi big a{
+    display: block;
+    color:#666666;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+
+
+
+/*主体右 的 内容4部分*/
+.zhuTiYou-neiRong4{
+    background-color: white;
+    display:block;
+    clear: both;
+}
+.zhuTiYou-neiRong4 div{
+    padding-top: 15px;
+}
+.zhuTiYou-neiRong4 div p{
+    font-weight:700;
+    margin-left: 10px;
+    display:inline-block;
+}
+.zhuTiYou-neiRong4 div span:hover{
+    color:red;
+}
+.zhuTiYou-neiRong4 div a{
+    float: right;
+    margin-right: 10px;
+    font-size: 12px;
+    color: black;
+}
+.zhuTiYou-neiRong4 img{
+    width: 32px;
+    height: 32px;
+    float: left;
+    padding: 10px 10px;
+}
+.zhuTiYou-neiRong4 ul{
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+.zhuTiYou-NR5{
+    background-color: white;
+    margin-top: 10px;
+    padding:10px;
+}
+.NR5-Tou a{
+    float: right;
+    color: black;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+
+}
+.NR5-Tou a:hover{
+    color:red;
+}
+
+.NR5-zhuTi{
+    width: 270px;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+}
+#NR5LBHuaBu{
+    width: 270px;
+    height: 180px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#NR5LBHuaBu div{
+    width: 270px;
+    height: 60px;
+}
+.NR5-zhuTi a{
+    color: black;
+}
+.NR5-zhuTi a:hover span{
+    transition: 0.3s;
+    color: red;
+}
+.NR5-zhuTi a:hover img{
+    opacity:0.8;
+    transition: 0.3s;
+}
+.NR5-zhuTi img{
+    float: left;
+}
+.NR5-zhuTi span{
+    display: inline-block;
+    width: 198px;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 5px;
+}
+.NR5-zhuTi p{
+    width: 198px;
+    height: 32px;
+    line-height: 16px;
+    overflow: hidden;
+    font-size: 12px;
+    padding:5px 0 0 5px;
+}
+
+
+
+
+
+
+
+.zhuTiYou-NR6{
+    background-color: white;
+    margin-top: 10px;
+    padding:10px;
+    overflow: hidden;
+}
+.zhuTiYou-NR6 div{
+    padding-bottom: 15px;
+}
+.zhuTiYou-NR6 div img{
+    float: left;
+    padding-right: 10px;
+}
+.zhuTiYou-NR6 div a:hover img{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.zhuTiYou-NR6 div a:hover strong{
+    transition: 0.3s;
+    color: red;
+}
+.zhuTiYou-NR6 div strong{
+    display: block;
+    font-size: 14px;
+    width: 156px;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    color: black;
+}
+.zhuTiYou-NR6 div p{
+    display: block;
+    font-size: 12px;
+    width: 156px;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    color: black;
+}
+.zhuTiYou-NR6 div span{
+    display: block;
+    color: #29bde0;
+    padding-top: 10px;
+    overflow: hidden;
+    font-size: 14px;
+}
+.zhuTiYou-NR6 p a{
+    display: block;
+    text-align:center;
+    color:rgb(102,102,102);
+}
+.zhuTiYou-NR6 p a:hover{
+    transition:0.3s;
+    color: red;
+}
+
+
+
+
+
+
+.zhuTiYou-NR7{
+    background-color: white;
+    margin-top: 10px;
+}
+.zhuTiYou-NR7 div:first-child a{
+    display: block;
+    padding: 15px 0 0 10px;
+}
+.zhuTiYou-NR7 ul{
+    overflow: hidden;
+}
+.zhuTiYou-NR7 ul li{
+    padding: 14px 8px 14px 10px;
+    border-bottom: solid 2px #f5f5f5;
+    float: left;
+}
+.zhuTiYou-NR7 ul li a{
+    color: black;
+}
+.zhuTiYou-NR7 ul li a:hover{
+    color: red;
+}
+.zhuTiYou-NR7 ul li p{
+    font-size: 14px;
+    padding: 5px 0;
+}
+.zhuTiYou-NR7 ul li div{
+    overflow: hidden;
+}
+.zhuTiYou-NR7 ul li div a{
+    display: inline-block;
+    margin: 0 1px 2px 0;
+    float:right;
+}
+.zhuTiYou-NR7 ul li div img{
+    float: left;
+    width: 89px;
+    height: 89px;
+}
+.zhuTiYou-NR7 ul li div img:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.zhuTiYou-NR7 ul div a:nth-child(1) img{
+    width: 180px;
+    height: 180px;
+}
+
+.zhuTiYou-NR7 div p{
+    text-align: center;
+    color: rgb(102,102,102);
+    height: 40px;
+    line-height:40px;
+}
+.zhuTiYou-NR7 div p:hover{
+    color: red;
+}
+
+.zhuTiYou-JRTM h4{
+    padding: 15px 0;
+    font-size: 14px;
+}
+.zhuTiYou-JRTM img{
+    width: 290px;
+    height: 242px;
+}
+
+
+
+
+
+
+

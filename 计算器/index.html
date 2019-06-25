@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加减乘除计算器</title>
+    <meta charset="UTF-8"><!--编码格式-->
+    <title>项目总览</title><!--顶部标题-->
+    <!--响应式兼容IE9-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <meta name="Keywords" content="王午阳的项目"> <!--关键词-->
+    <meta name="Description" content="王午阳的项目">  <!--内容描述-->
+    <meta name="author" content="王午阳"> <!--作者-->
+
+    <meta http-equiv="Cache-Control" CONTENT="no-cache"><!--不让页面进行缓冲/缓存-->
+
+    <style>
+
+        /*常用css样式设置*/
+        *{padding:0;margin:0;}                              /*所有元素padding和margin的默认边距设为0*/
+        html{font-size: 62.5%;} /*默认字体大小设为原本的62.5%,即10px*/
+        ul,li{list-style: none;}                           /*取消ul,li的默认样式：点*/
+        a{text-decoration: none;}           /*取消默认样式：下划线；默认颜色设为黑色*//*使a标签变为块元素 减少html标签总量 增加DOM性能*/
+        h1,h2,h3,h4,h5,h6{text-align: center;}
+        a{
+            /*取消a标签点击时的颜色*/
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+        .qingchufudong{clear:both;}
+
+        .WaiKe{
+            max-width: 1920px;min-width: 320px; min-height:1000px;font-size: 1.6rem;
+            background-image: url("wenjian/img/1.jpg"); background-size:100%;  background-repeat:no-repeat;
+        }
+        .JiSuanQi{padding:50px 0 0 50px; opacity: .8;width:300px;}
+        .JiSuanQi > p{font-size: 1.8rem;padding: 10px 0;position: relative;}
+        .QingKongJiLu {position: absolute; right: -60px;top:40px; width:50px;font-size: 1.4rem;text-align: center;background-color: white;padding: 2px;cursor: pointer;opacity: .8;}
+        .JiSuanQi > p strong{text-align: center;display: block;}
+        .ShuRuJiLu{width:100%;min-height:50px;background-color:wheat;font-size:1.8rem;border: none;}
+        .ShouDongShuRu{width:100%;height:50px;background-color: #0BB908;font-size:1.8rem;}
+        .JieGuo{height: 30px;line-height: 30px;display: block; margin: 0 auto;font-size:2rem;}
+        .AnJian{}
+        .AnJian input{width: 23%;height:40px;line-height:40px;margin:4px 1%;font-size: 1.8rem;float: left;}
+    </style>
+</head>
+<body>
+<div class="WaiKe">
+    <article class="JiSuanQi">
+        <p>
+            <strong>输入记录</strong>
+            <input id="ShuRuJiLu" class = "ShuRuJiLu" type="button" name="ShuRuJiLu" />
+            <span id="QingKongJiLu" class="QingKongJiLu">清空记录区</span>
+        </p>
+        <p><strong>手动输入</strong><textarea id="ShouDongShuRu" class = "ShouDongShuRu" name="ShouDongShuRu"></textarea></p>
+        <p><strong>运算结果</strong><input id="YunSuanJieGuo" class = "JieGuo"  type="text" name="YunSuanJieGuo"></p>
+        <section class="AnJian">
+            <input type = "button" class="ChangGui" name="1" value="1" />
+            <input type = "button" class="ChangGui" name="2" value="2"/>
+            <input type = "button" class="ChangGui"  name="3" value="3"/>
+            <input type = "button" class="ChangGui"  name="jia" value="+"/>
+            <input type = "button" class="ChangGui"  name="4" value="4"/>
+            <input type = "button" class="ChangGui"  name="5" value="5"/>
+            <input type = "button" class="ChangGui"  name="6" value="6"/>
+            <input type = "button" class="ChangGui"  name="jian" value="-"/>
+            <input type = "button" class="ChangGui"  name="7" value="7"/>
+            <input type = "button" class="ChangGui"  name="8" value="8"/>
+            <input type = "button" class="ChangGui"  name="9" value="9"/>
+            <input type = "button" class="ChangGui"  name="cheng" value="*"/>
+            <input type = "button" class="ChangGui"  name="dian" value="."/>
+            <input type = "button" class="ChangGui"  name="0" value="0"/>
+            <input type = "button" id="HouTui"        name="houtui" value="后退"/>
+            <input type = "button" class="ChangGui"  name="chu" value="/"/>
+            <input type = "button" class="ChangGui"  name="kuohao_zuo" value="("/>
+            <input type = "button" class="ChangGui"  name="kuohao_you" value=")" />
+            <input type = "button" id="QingKong"      name="qingkong" value="清空"/>
+            <input type = "button" id="DengHao"  name="dengyu" value="="/>
+            <div class="qingchufudong"></div>
+        </section>
+    </article>
+</div>
+<script>
+   function YunSuan() {
+       var ShuRuJiLu = document.getElementById("ShuRuJiLu"),
+           ShouDongShuRu = document.getElementById("ShouDongShuRu"),
+           YunSuanJieGuo = document.getElementById("YunSuanJieGuo"),
+           HouTui = document.getElementById("HouTui"),
+           QingKong = document.getElementById("QingKong"),
+           inputs = document.getElementsByClassName("ChangGui"),
+           DengHao = document.getElementById("DengHao"),
+           QingKongJiLu = document.getElementById("QingKongJiLu");
+       var i =0;//提升可以忽略不计的一丢丢性能
+       for(i;i<inputs.length;i++){
+           inputs[i].onclick = function () {
+               ShuRuJiLu.value += this.value;
+               ShouDongShuRu.value += this.value;
+           }
+       }
+       QingKong.onclick = function () {
+           ShouDongShuRu.value = "";
+       };
+       QingKongJiLu.onclick = function () {
+           ShuRuJiLu.value = "";
+       }
+
+
+   }
+   YunSuan();
+</script>
+</body>
+</html>

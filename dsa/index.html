@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>前端笔记</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../public_file/public_file.css">
+    <link rel="stylesheet" href="wenjian/css.css" />
+</head>
+<body>
+<div class="Fu">
+    <section class="Tou">
+        <h1>前端知识点总结</h1>
+        <form class="SouSuo">
+            <input type="text" name="SouSuo" value="搜索文章" />
+        </form>
+    </section>
+    <section class="ZhuTi">
+        <article class="DaoHang_Fu">
+            <ul class="DaoHang">
+                <li id="HTML_DH">html部分</li>
+                <li id="CSS_DH">css部分</li>
+                <li id="JS_DH">js部分</li>
+                <li id="VUEJS_DH">vue.js部分</li>
+                <li class="BuKeDianJi" id="PHP_DH">PHP部分</li>
+                <li class="BuKeDianJi" id="QiTa_DH">其他部分</li>
+            </ul>
+        </article>
+        <article class="NeiRong">
+            <div class="NR_FenLei">
+                <h3>具体分类</h3>
+                <ul class="NR_FenLei_ul">
+                    <li>
+                        <h4>常识部分</h4>
+                        <ul class="NR_FenLei_ul_li_ul">
+                            <li>暂无内容</li>
+                            <li>暂无内容</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>总结部分</h4>
+                        <ul class="NR_FenLei_ul_li_ul" id="NR_ZongJie">
+                            <li class="XuanZhong">meta标签相关</li>
+                            <li>暂无内容</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="changyong">
+                    <h4>外链知识</h4>
+                    <a href="http://www.w3school.com.cn/cssref/css_colors_legal.asp"><span>css颜色值分类</span></a>
+                    <a href="http://www.w3school.com.cn/cssref/css_colorsfull.asp"><span>css颜色十六进制值</span></a>
+                    <a href="http://www.w3school.com.cn/cssref/index.asp"><span>css参考手册</span></a>
+                </div>
+            </div>
+            <div class="NR_ZhengWen" id="NR_ZhengWen">
+                <h3>meta标签相关</h3>
+                <div class="NR_ZhengWen_NR1">
+                    <p>
+                        <strong><...meta http-equiv="Content-Type" content="text/html; charset=UTF-8"...></strong><br />
+                        <span>设置宽度为设备的宽度，默认不缩放，不允许用户缩放（即禁止缩放），在网页加载时隐藏地址栏与导航栏（ios7.1新增）</span>
+                    </p>
+                    <p>
+                        <strong><... meta content="True" name="HandheldFriendly"...></strong><br />
+                        <span></span>
+                    </p>
+                    <p>
+                        <strong><...meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"...></strong><br />
+                        <span>是否启动webapp功能，会删除默认的苹果工具栏和菜单栏</span>
+                    </p>
+                    <p>
+                        <strong><.. meta name="apple-mobile-web-app-capable" content="yes">...></strong><br />
+                        <span>当启动webapp功能时，显示手机信号、时间、电池的顶部导航栏的颜色。默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）</span>
+                    </p>
+                    <p>
+                        <strong><...meta name="apple-mobile-web-app-status-bar-style" content="black"...></strong><br />
+                        <span>忽略页面中的电话号码数字和邮件链接</span>
+                    </p>
+                    <p>
+                        <strong><...meta name="format-detection" content="telephone=no, email=no"...></strong><br />
+                        <span>启用360浏览器的极速模式(webkit)</span>
+                    </p>
+                    <p>
+                        <strong><...meta name="renderer" content="webkit"...></strong><br />
+                        <span>避免IE使用兼容模式</span>
+                    </p>
+                    <p>
+                        <strong><...meta http-equiv="X-UA-Compatible" content="IE=edge"...></strong><br />
+                        <span>针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓</span>
+                    </p>
+                    <p>
+                        <strong><...meta name="HandheldFriendly" content="true"...></strong><br />
+                        <span>微软的老式浏览器</span>
+                    </p>
+                    <p>
+                        <strong><...meta name="MobileOptimized" content="320"...></strong><br />
+                        <span>uc强制竖屏</span>
+                    </p>
+                    <p>
+                        <strong><...meta name="screen-orientation" content="portrait"...></strong><br />
+                        <span>QQ强制竖屏</span>
+                    </p>
+                    <p>
+                        <strong><...meta name="x5-orientation" content="portrait"...></strong><br />
+                        <span>windows phone 点击无高光</span>
+                    </p>
+                    <p>
+                        <strong><...meta name="msapplication-tap-highlight" content="no"...></strong><br />
+                        <span></span>
+                    </p>
+                </div>
+            </div>
+            <div class="aaaaa">这里再放点什么内容比较好</div>
+        </article>
+    </section>
+    <section class="Wei">
+
+    </section>
+</div>
+<script src="../../public_file/vue.min.js"></script>
+<script src="wenjian/js.js"></script>
+</body>
+</html>

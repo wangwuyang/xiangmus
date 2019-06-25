@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue练习</title>
+
+</head>
+<body>
+<div id="A">
+    {{aaa}}
+</div>
+<div id="B">
+    <span v-bind:title = "aaa">鼠标悬停可查看title</span>
+</div>
+<div id="C">
+    <span v-if = "seen">你能看到我</span>
+</div>
+
+<script src = "../../public_file/vue.js"></script><!--引入vue.js文件-->
+<script>
+    var jsa = new Vue(
+        {
+            el:"#A",
+            data:{
+                aaa:"dsadas"
+            }
+
+        }
+    );
+    var jsb = new Vue(
+        {
+            el:"#B",
+            data:{
+                aaa:'页面加载于 ' + new Date().toLocaleString()
+            }
+        }
+    );
+    var jsc = new Vue({el:'#C',data:{seen:"ture"}})
+</script>
+
+</body>
+</html>

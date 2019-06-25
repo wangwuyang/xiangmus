@@ -1,0 +1,195 @@
+<!DOCTYPE html><!--严谨版-->
+<html lang="zh-cmn-Hans"><!--兼容性写法 简体中文普通话页面-->
+<head>
+    <meta charset="UTF-8">
+    <title>坦克大战</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script>
+        var link=document.getElementsByTagName('link')[0];
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {/*如果是这些移动端  则...*/}
+        else{/* document.location.href="youlijin";*/}
+    </script>  <!--分析设备类型与型号-->
+    <script src="http://ip.ws.126.net/ipquery"></script> <!--获取IP判断所在城市-->
+    <script>/*直辖市和省份用lo 普通城市用lc*/
+    if(lo===("北京市")) {
+        /*document.location.href="youlijin";*/
+    }
+    </script>
+    <meta name="Keywords" content="王午阳的坦克大战"> <!--关键词-->
+    <meta name="Description" content="王午阳的坦克大战">  <!--内容描述-->
+    <meta name="author" content="王午阳"> <!--作者-->
+    <meta http-equiv="Cache-Control" CONTENT="no-cache"><!--不让页面进行缓冲/缓存-->
+    <link rel="stylesheet" href="wenjian/css.css" /><!--引入css文件-->
+    <script src="wenjian/head.js"></script><!--引入先于页面执行的js文件-->
+    <link rel=" stylesheet" href="//at.alicdn.com/t/font_532608_dr362bthiqus1yvi.css">
+
+    <style>
+        *{padding:0;margin:0;}html{font-size: 62.5%;background-color: white;}ul,li{list-style: none;}h1,h2,h3,h4,h5,h6{text-align: center;}
+        a{/*取消默认样式:下划线;取消a标签点击时的颜色兼容写法;*/
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;  -webkit-touch-callout: none;  -webkit-user-select: none;
+        }
+        .WaiKe{background-color: rgba(240,240,240,1);}
+        .TanKeDaZhan{width:400px;height: 400px; background-color: #f3e5c6;margin: 100px auto;position: relative;}
+
+        .TanKe1{width:20px;height: 20px; position: absolute;top: 380px;left: 120px;background-color: black;}
+    </style>
+</head>
+<body>
+<div class="WaiKe">
+    <div class="TanKeDaZhan" id="TanKeDaZhan">
+        <p class="TanKe1" id="TanKe1"></p>
+    </div>
+</div>
+
+<script src="wenjian/body.js"></script>
+<script>
+    function TKDZHS() {
+        var TanKeDaZhan = document.getElementById("TanKeDaZhan");//获取元素—坦克大战战场
+        var TKDZ_width = TanKeDaZhan.offsetWidth;  //坦克大战战场的宽度
+        var TKDZ_Height = TanKeDaZhan.offsetHeight;//坦克大战战场的高度
+        var TanKe1 = document.getElementById("TanKe1");//获取元素- 控制的坦克1
+
+
+        TanKe1.DongHua1 = null;
+        TanKe1.DHZT = false;
+        //获取按键值并赋予事件
+        onkeydown = function(CanShu1){
+            //兼容性写法——获取按键值
+            var AnJianZhi = null;
+            if(CanShu1.keyCode){AnJianZhi = CanShu1.keyCode;} /*IE*/
+            else if(CanShu1.which){AnJianZhi = CanShu1.which;}  /*Netscape/Firefox/Opera*/
+
+            var TanKe1_Shang = TanKe1.offsetTop;    //坦克1距离顶部的长度
+            var TanKe1_Zuo = TanKe1.offsetLeft;  //坦克1距离左边的长度
+
+
+            if(AnJianZhi === 38) {//   alert('上箭头');
+                if(TanKe1_Shang >= 20){
+                    if(TanKe1.DHZT === false){
+                        TanKe1.DHZT = true;
+                        YiDong(20,"top");
+                    }
+                }
+            }
+            if(AnJianZhi === 40) {//    alert('下箭头');
+                if(TanKe1_Shang <= 360){
+                    if(TanKe1.DHZT === false){
+                        TanKe1.DHZT = true;
+                        YiDong(20,"bottom");
+                    }
+                }
+            }
+            if(AnJianZhi === 37) {//   alert('左箭头');
+                if(TanKe1_Zuo >= 20){
+                    if(TanKe1.DHZT === false){
+                        TanKe1.DHZT = true;
+                        YiDong(20,"left");
+                    }
+                }
+            }
+            if(AnJianZhi === 39) {//    alert('右箭头');
+                if(TanKe1_Zuo <= 360){
+                    if(TanKe1.DHZT === false){
+                        TanKe1.DHZT = true;
+                        YiDong(20,"right");
+                    }
+                }
+            }
+        };
+
+        //按键事件函数
+        function YiDong(JL,FX) {//参数1：每次移动的距离；参数2：移动的方向
+            var TanKe1_Shang = TanKe1.offsetTop;    //坦克1距离顶部的长度
+            var TanKe1_Zuo = TanKe1.offsetLeft;  //坦克1距离左边的长度
+          //  alert(TanKe1_Shang);
+            var MeiCi = null;
+            var MuBiao = null;
+            var ChuFa = null;
+            if(FX === "top"){
+                        MuBiao = TanKe1_Shang - JL;
+                        ChuFa = TanKe1_Shang;
+                        TanKe1.DongHua1 = setInterval(function () {
+                            //   alert("出发大小"+ChuFa+"目标大小"+MuBiao);
+                            if(ChuFa === MuBiao){
+                                clearInterval(TanKe1.DongHua1);
+                                //   alert("已到达目标");
+                                TanKe1.DHZT = false;
+                            }
+                            else {
+                                MeiCi = ChuFa - JL/4;
+                                ChuFa -= JL/4;
+                                TanKe1.style.top = MeiCi + "px";
+                                // alert("已移动一小步"+"目前top值：" +TanKe1.style.top);
+                            }
+                        },20);
+                    }
+            if(FX === "bottom"){
+                        MuBiao = TanKe1_Shang + JL;
+                        ChuFa = TanKe1_Shang;
+                        TanKe1.DongHua1 = setInterval(function () {
+                            if(ChuFa === MuBiao){
+                                clearInterval(TanKe1.DongHua1);
+                                //   alert("已到达目标");
+                                TanKe1.DHZT = false;
+                            }
+                            else {
+                                MeiCi = ChuFa + JL/4;
+                                ChuFa += JL/4;
+                                TanKe1.style.top = MeiCi + "px";
+                                // alert("已移动一小步"+"目前top值：" +TanKe1.style.top);
+                            }
+                        },20);
+                    }
+            if(FX === "left"){
+                        MuBiao = TanKe1_Zuo - JL;
+                        ChuFa = TanKe1_Zuo;
+                        TanKe1.DongHua1 = setInterval(function () {
+                            if(ChuFa === MuBiao){
+                                clearInterval(TanKe1.DongHua1);
+                                //   alert("已到达目标");
+                                TanKe1.DHZT = false;
+                            }
+                            else {
+                                MeiCi = ChuFa - JL/4;
+                                ChuFa -= JL/4;
+                                TanKe1.style.left = MeiCi + "px";
+                                // alert("已移动一小步"+"目前top值：" +TanKe1.style.top);
+                            }
+                        },20);
+                    }
+            if(FX === "right"){
+                        MuBiao = TanKe1_Zuo + JL;
+                        ChuFa = TanKe1_Zuo;
+                        TanKe1.DongHua1 = setInterval(function () {
+                            if(ChuFa === MuBiao){
+                                clearInterval(TanKe1.DongHua1);
+                                //   alert("已到达目标");
+                                TanKe1.DHZT = false;
+                            }
+                            else {
+                                MeiCi = ChuFa + JL/4;
+                                ChuFa += JL/4;
+                                TanKe1.style.left = MeiCi + "px";
+                                // alert("已移动一小步"+"目前top值：" +TanKe1.style.top);
+                            }
+                        },20);
+                    }
+        }
+    }
+    TKDZHS();
+</script>
+</body>
+</html>

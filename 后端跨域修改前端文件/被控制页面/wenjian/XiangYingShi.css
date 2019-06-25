@@ -1,0 +1,36 @@
+@media screen and (min-width :640px) {
+    html{font-size: 65%;}
+    .Fu{width: 640px;margin: 0 auto;}
+
+}
+
+
+
+
+@media screen and (max-width :416px) {
+    .Di_F_Zuo span a{padding:0 2px; }
+    .Di_Fu{width:98%;padding: 2px 1%;}
+    .Di_Fixed{font-size: 1.4rem;}
+}
+@media screen and (max-width :400px) {
+}
+@media screen and (max-width :390px) {
+    .ClassAWaiKe{padding: 0 2px;}
+    .Di_F_Zuo .ClassA{font-size: 1.6rem;}
+}
+@media screen and (max-width :385px) {
+ /*  .Di_Fixed{width: 320px;}/*宽度小于320后悬浮的无法左右移动问题当如何解决？*/
+    .ZhuTi_1A p span img{width:1.4rem;}
+    .ZhuTi_1B header .ClassAWaiKe{width: 50%;}
+}
+@media screen and (max-width :350px) {
+    .Tou_1 span{width: 80px;}
+}
+@media screen and (max-width :340px) {
+    .Di_Fixed{font-size: 1.2rem;}
+}
+@media screen and (max-width :319px) {
+    .WaiKe{width: 320px;}
+    .Di_Fixed{width: 320px;}/*宽度小于320后悬浮的无法左右移动问题当如何解决？*/
+    .Tou_Fixed{width: 320px;}
+}

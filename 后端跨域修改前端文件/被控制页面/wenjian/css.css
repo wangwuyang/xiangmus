@@ -1,0 +1,200 @@
+﻿
+/*常用css样式设置*/
+*{padding:0;margin:0;}                              /*所有元素padding和margin的默认边距设为0*/
+html{font-size: 62.5%;background-color: white;} /*默认字体大小设为原本的62.5%,即10px 背景颜色设为白色*/
+ul,li{list-style: none;}                           /*取消ul,li的默认样式：点*/
+a{color: black;}           /*取消默认样式：下划线；默认颜色设为黑色*/
+em{}
+b{}
+i{}
+strong{}
+span{}
+h1{padding: 1.4rem 0;font-size: 2.4rem;}
+h2{padding: 1.2rem 0;font-size: 2.2rem;font-weight:400;}
+h3{padding: 1rem 0;font-size: 2rem;}
+
+/*h5语义化ing*/
+header{}
+
+
+/*text-indent: 2rem; 首行缩进*/
+/*常用class设定*/
+.WaiKe{width:100%;background-color:rgba(153,153,153,1);color: black;font-family:"Microsoft YaHei","新宋体",sans-serif;}
+.Fu{width:96%;;position: relative;background-color:white;max-width: 640px;padding: 50px 2% 50px 2%;}
+/*微信号随机显示的样式部分*/
+.ClassAWaiKe{padding:2px 4px;display: inline-block;background-color:red;}
+.ClassA{color:white;font-size: 1.8rem;display: block;height: 24px;line-height: 24px;}
+
+
+/*头部*/
+.Tou{border-top: solid 1px rgb(218,218,218);padding-bottom: 10px;}
+/*头部第1部分*/
+
+.Tou_1 span{background-color:rgb(42,144,215);color:white;  width:100px;  padding: 0;border-radius:10px;  font-size: 1.6rem;text-align: center;cursor: pointer;  float: right;  }
+.Tou_1 p{font-size: 1.6rem;overflow: hidden;height: 40px;line-height: 40px;}
+.Tou_1 p img{float: left;width: 30px;padding: 5px 5px;}
+
+
+/*主体内容部分*/
+.ZhuTi{font-size: 1.6rem;padding: 10px 0;margin-bottom:20px;}
+.ZhuTi img{width: 100%;}
+
+/*主体内容第1部分*/
+.ZhuTi_1{padding: 10px 0;}
+
+/*主体内容第一部分第A章*/
+.ZhuTi_1A{padding: 10px 0;font-size: 1.8rem;}
+.ZhuTi_1A p{line-height: 200%;padding:0 6px;margin-bottom: 20px;border: solid 1px rgb(218,218,218);}
+.ZhuTi_1A p span{color: rgb(42,144,215);}
+.ZhuTi_1A p span img{width:1.8rem;vertical-align: middle;}
+.ZhuTi_1A strong{text-align: center;padding: 10px 0;font-size: 1.8rem;display: block;font-weight: normal;color: rgb(160,161,180);}
+
+.ZhuTi_1B{margin: 10px 0;}
+.ZhuTi_1B header{background-color:rgb(348,89,89);color: white;font-size: 1.6rem;padding-left: 10px;border-radius:10px;}
+.ZhuTi_1B header div{background-color: white;display:inline-block;padding: 2px 10px;margin: 10px 0;width: 50%;text-align: center;border-radius: 6px;max-width: 240px;}
+.ZhuTi_1B header img{vertical-align: middle;width: 20px;margin-left: -10px;}
+.ZhuTi_1B header .ClassAWaiKe{background-color: white;}
+.ZhuTi_1B header .ClassAWaiKe .ClassA{background-color: inherit; color: black;}
+
+.ZhuTi_1B > p{margin: 10px 0;border:  solid 2px red;line-height: 200%;padding: 10px;font-size: 1.8rem;}
+.ZhuTi_1B > p strong{color: rgb(78,78,78)}
+.ZhuTi_1B > p .ClassA{color: white;}
+
+
+
+/*主体内容 第二部分（人物自述部分）*/
+.ZhuTi_2{line-height: 200%;}
+
+/*第二部分的第A章*/
+.ZhuTi_2A{font-size: 1.6rem;padding: 10px 0;}
+.ZhuTi_2B{font-size: 1.6rem;padding: 10px 0;}
+.ZhuTi_2C{font-size: 1.6rem;padding: 10px 0;}
+
+/*第二部分的第D章*/
+
+.ZhuTi_2D{width: 90%;margin:10px auto;}
+.ZhuTi_2D_Top{background-color: white;text-align: center;overflow: hidden;border: solid 2px red;margin-bottom: 10px;padding-bottom: 10px;}
+.ZhuTi_2D_Top h4{color: red;padding-top: 10px;margin-top: 10px;text-align: center;}
+.ZhuTi_2D_Top p{padding: 10px 0;color: #00a0fe;}
+.ZhuTi_2D_Bottom{}
+.ZhuTi_2D_Bottom span a{font-size: 1.2rem;text-decoration: none;color: rgb(160,160,160)}
+.ZhuTi_2D_Bottom ul{overflow: hidden;width: 90%;margin: 0 auto;}
+.ZhuTi_2D_Bottom li{float: left;margin:10px 2%;padding:0 3%;background-color:rgb(248,248,248);border-radius: 10px;border:solid 1px rgb(228,228,228);}
+.ZhuTi_2D_Bottom p{width: 90%;margin: 0 auto;}
+.ZhuTi_2D_Bottom p a{text-decoration: none;background-color:rgb(248,248,248);border: solid 1px rgb(228,228,228);border-radius: 10px;display: inline-block;padding:0 3%;margin: 0 2%;}
+
+
+
+/*主体3  （评论区）*/
+.ZhuTi_3{}
+.ZhuTi_3 header{overflow: hidden;}
+.ZhuTi_3 header span{text-align: center;display: inline-block;float: left;padding: 10px;}
+.ZhuTi_3 header span.ZhuTi_3_header_span3{float: right;}
+.ZhuTi_3 header span b{font-weight: normal;padding: 0 4px;font-size: 1.4rem;}
+
+
+.ZhuTi_3 article{padding: 10px 0;}
+.ZT3PL_Shang{padding: 4px 0;overflow: hidden;}
+.ZT3PL_Shang_Zuo{padding: 0 4px;display: inline-block;height: 40px;line-height: 20px;}
+.ZT3PL_Shang_Zuo img{width:40px;display:inline-block;float: left;margin-right: 10px;}
+.ZT3PL_Shang_Zuo b{font-size: 1.4rem;display: inline-block;min-width: 100px;}
+.ZT3PL_Shang_Zuo time{font-size: 1.4rem;display: inline-block;}
+.ZT3PL_Shang_You{height:40px;line-height:40px;float: right;overflow:hidden;}
+.ZT3PL_Shang_You span{font-size: 1.4rem;float: left;padding-right: 6px;color: rgb(150,150,150);}
+.ZT3PL_Xia{padding-left: 56px;font-size: 1.4rem;
+    line-height:200%;}
+
+.ZT3PL_Xia_HF{padding: 10px 0;background-color: rgb(244,243,243);margin: 6px 0;}
+.ZT3PL_Xia_HF img{width: 20px;vertical-align: middle;}
+.ZT3PL_Xia_HF span{color: rgb(42,144,215);}
+
+
+
+.ZhuTi_3_Wei{
+    background-color:rgb(248,89,89);color: white;background-color:rgba(248,89,89,1);
+    width: 100%;height: 50px;line-height: 50px;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ZhuTi_4{text-align: center;padding-top: 40px;}
+.ZhuTi_4 header{}
+.ZhuTi_4 a{text-decoration: none;}
+
+
+/*头部_fixed部分*/
+.Tou_Fixed{position:fixed;top: 150px;left:0;width:100%;z-index: 10;display: none;}
+.Tou_Fixed_NR{background-color: white;text-align: center;margin: 0 auto;max-width: 640px;border-radius: 8px;font-size: 1.6rem;overflow: hidden;}
+.Tou_Fixed2_NR_NR{min-width: 320px;}
+.Tou_Fixed_h4{color: red;padding-top: 10px;margin-top: 30px;font-size: 1.6rem;}
+.Tou_Fixed_p{padding: 16px 0;color: #00a0fe;}
+.Tou_Fixed_span{font-size: 1.4rem;display: block;padding-bottom: 20px;}
+.Tou_Fixed_GuanBi{cursor:pointer;font-size: 2rem;color: red;padding: 14px 0;border-top: solid 1px #bcbab6;}
+.layui-layer-page{width: 96%;}
+
+
+/*快去和小旭对话吧  的原生内容*/
+/*.Tou_Fixed2{position: fixed;width: 100%;text-align: center;left: 0;bottom: -50px;}*/
+/*.Tou_Fixed2_P{background-color:rgba(75,75,75,0.8);width:60%;margin: 0 auto;font-size: 1.6rem;  color: white;padding:6px;border-radius:4px;max-width: 200px;  }*/
+
+
+
+
+
+/*底部_fixed部分*/
+.Di_Fixed{ position:fixed;bottom:0;left: 0; width:100%; font-size:1.6rem; }
+.Di_Fu{width: 100%;margin: 0 auto;max-width: 640px;min-width: 320px;background-color:rgb(238,238,238);padding: 2px 2%;border-top: solid 1px rgb(204,204,204);}
+
+/*左右两个div*/
+.Di_F_Zuo,.D_F_You{display: inline-block;}
+.Di_F_Zuo .Di_F_Zuo_Tou{height: 40px;line-height: 40px;}
+.Di_F_Zuo .Di_F_Zuo_Tou .ClassA{}
+.Di_F_You{float: right;margin-right:2%;}
+.Di_F_You span{border-radius:8px;background-color:rgb(19,86,226);display:inline-block;margin-top: 10px;}
+.Di_F_You span a{display:block;color: white;padding: 10px 20px;}
+.Di_F_You span a:hover{text-decoration:none;}
+
+
+/*透明的罩子*/
+.TouMing_ZheGai{
+    display: none;;
+    position:fixed;top:0;left: 0;
+    width: 100%;height: 100%;
+    background-color:rgb(100,100,100);
+    filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity: 0.8; opacity: 0.8;
+}
+
+.CNZZ{position: fixed;bottom: -200px;left: 0;}
+
+
+
+
+
+
+/*字体图标部分*/
+@font-face {font-family: "iconfont";
+    src: url('iconfont.eot?t=1493781163782'); /* IE9*/
+    src: url('iconfont.eot?t=1493781163782#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff?t=1493781163782') format('woff'), /* chrome, firefox */
+    url('iconfont.ttf?t=1493781163782') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('iconfont.svg?t=1493781163782#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-shoucang:before { content: "\e62b";font-size: 22px;color: red;vertical-align: bottom;}
+
+.icon-zan:before { content: "\e601";font-size: 3.2rem; float: left;color: rgb(150,150,150);}
+.icon-pinglun:before { content: "\e638";font-size: 3.2rem;float: left;color: rgb(150,150,150); padding-top: 2px;}
+
+
+
+
+/*layer部分*/
+.layui-layer-setwin{display:none;}

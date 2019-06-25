@@ -1,0 +1,32 @@
+/*常用css样式设置*/
+*{padding:0;margin:0;}                              /*所有元素padding和margin的默认边距设为0*/
+html{font-size: 62.5%;background-color: white;} /*默认字体大小设为原本的62.5%,即10px—方便rem单位 背景颜色设为白色*/
+ul,li{list-style: none;}                           /*取消ul,li的默认样式：点*/
+a{text-decoration: none;}           /*取消默认样式：下划线；默认颜色设为黑色*//*使a标签变为块元素 减少html标签总量 增加DOM性能*/
+h1,h2,h3,h4,h5,h6{text-align: center;}
+a{-webkit-tap-highlight-color: transparent;-webkit-touch-callout: none;-webkit-user-select: none;}/*取消a标签点击时的颜色*/
+body{background-color:rgb(188,126,104);cursor: default;}
+/*常用class设定*/
+.Fu{font-size: 1.6rem;color: black;background-color: white;min-width: 320px;min-height:2000px;margin: 0 auto;}
+/*响应式 rem*/
+@media screen and (max-width :1024px){ html{font-size:60%;} }
+@media screen and (max-width :900px){ html{font-size:58%;} }
+@media screen and (max-width :850px){ html{font-size:56%;} }
+@media screen and (max-width :800px){ html{font-size:54%;} }
+@media screen and (max-width :750px){ html{font-size:52%;} }
+@media screen and (max-width :700px){ html{font-size:50%;} }
+@media screen and (max-width :650px){ html{font-size:48%;} }
+@media screen and (max-width :600px){ html{font-size:46%;} }
+@media screen and (max-width :550px){ html{font-size:44%;} }
+@media screen and (max-width :500px){ html{font-size:42%;} }
+@media screen and (max-width :450px){ html{font-size:40%;} }
+
+[v-cloak]{display: none;}
+.vue1{}
+.span1{padding: 2px 4px;border-radius: 20%;display: inline-block;vertical-align: middle;}
+thead{}
+table{width: 46rem;margin: 20rem auto 0 auto;}
+td{padding: 1rem;text-align: center;}
+button{padding: 2px;}
+.vue1 div{text-align: center;}
+.DangQianJiaGeBF{padding: 0 4px;}

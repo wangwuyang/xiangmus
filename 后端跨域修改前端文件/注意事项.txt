@@ -1,0 +1,8 @@
+客户端：
+1、注意各文件路径:
+ChuLi.php要放在和index.html并列的wenjian文件夹下面（放到其他地方的话需要更改代码路径）
+WeiXinHao.js要和index.html并列。（WeiXinHao.js需要把文件权限修改成允许读取打开写入修改巴拉巴拉）
+
+服务器端：
+1、每增加一个需要更改的客户端链接，就在服务器端的html的相应value上增加相应路径
+2、WeiXinHao.js需要授予更改权限： 给u***账户 写入 权限

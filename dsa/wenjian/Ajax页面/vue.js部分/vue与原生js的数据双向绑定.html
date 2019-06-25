@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue与原生js的数据双向绑定</title>
+    <script src="../../../../../public_file/vue.min.js"></script>
+    <style>
+        .A{width: 300px;height: 200px;background-color: #727b7f;margin: 100px auto;text-align: center;}
+        .JieShao{text-align: center;}
+        h4{padding: 20px 0;}
+    </style>
+</head>
+<body>
+<section class="A">
+    <h4>原生js</h4>
+        <input id = "ShuRu" value = "嗯。。"/>
+        <p id = "ShuChu"></p>
+</section>
+<script>
+    var a = document.getElementById("ShuRu");
+    var b = document.getElementById("ShuChu");
+    a.valueZhi = a.value;
+    a.onkeyup = function(){
+     //   alert(a.value + "   " +b.innerHTML);
+        if(a.valueZhi !== a.value){
+            b.innerHTML =  a.value;
+        }
+    }
+</script>
+
+
+<section class="A">
+    <h4>vue.js</h4>
+    <div id="app">
+        <input v-model="message">
+        <p>{{ message }}</p>
+    </div>
+</section>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Runoob!'
+        }
+    })
+</script>
+
+<section class="JieShao">
+    <p>原生js的onkeydown事件是按下之后执行，会漏掉value的第一个值，原因尚在思考</p>
+    <p>原生js的onkeypress事件是按住并松开之后才执行；会漏掉value的第一个值，原因尚在思考</p>
+    <p>推测原因是 input自带一个onkeypress事件或者onkeyup事件 js事件优先级大于input自带的 所以js执行时 由于input值尚未写入到value里 进而获取到了空的值</p>
+    <p>原生js的onkeyup事件才可实现vue的效果 推测vue.js也是借用的onkeyup事件</p>
+</section>
+</body>
+</html>

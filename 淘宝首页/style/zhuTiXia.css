@@ -1,0 +1,473 @@
+
+
+.zhuTiXia{
+    margin-top: 100px;
+    overflow: hidden;
+    width: 1190px;
+}
+.zhuTiXia1{
+    background-color: white;
+}
+.zhuTiXia1-Tou{
+    text-align: center;
+    padding: 10px;
+}
+.zhuTiXia1-Tou div{
+    display: inline-block;
+    overflow: hidden;
+}
+.zhuTiXia1-Tou img{
+    float: left;
+}
+.zhuTiXia1-Tou span{
+    width: 100px;
+    background-color:rgb(231,231,231);
+    height: 2px;
+    display: inline-block;
+    line-height: 20px;
+    margin: 8px 0;
+}
+.zhuTiXia1-Tou h3{
+    float: left;
+}
+
+
+.zhuTiXia1 .zhuTiXiaUl1{
+    overflow: hidden;
+    padding: 0 0 5px 10px;
+}
+.zhuTiXia1 .zhuTiXiaUl1 li{
+    float:left;
+    font-size: 14px;
+    padding: 0 6px;
+}
+.zhuTiXia1 .zhuTiXiaUl1 li a{
+    color:rgb(108,108,108);
+}
+.zhuTiXia1 .zhuTiXiaUl1 li a:hover{
+    color: red;
+}
+
+
+
+.zhuTiXiaUl2{
+    overflow: hidden;
+}
+.zhuTiXiaUl2 li{
+    float: left;
+}
+.zhuTiXiaUl2Li1{
+    width: 19.6%;
+}
+.zhuTiXiaUl2Li2{
+    width:13.5%;
+}
+.ZTXDIV1{
+    width: 100%;
+    padding-top: 10px;
+    border: solid 1px #e8e8e8;
+    position: relative;
+}
+.zhuTiXiaBianHua{
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: red;
+    width: 100%;
+    height: 225px;
+    opacity:0.8;
+    z-index: 1;
+    display: none;
+}
+.zhuTiXiaUl2Li2 .zhuTiXiaBianHua{
+    height:150px;
+}
+.zhuTiXiaBianHua em{
+    color:white;
+    font-style: normal;
+    display:block;
+    margin: 130px 0 0 10px;
+    font-size: 14px;
+}
+.zhuTiXiaUl2Li2 .zhuTiXiaBianHua em{
+    margin: 80px 0 0 10px;
+}
+.zhuTiXiaBianHua p{
+    display: inline-block;
+    width: 40%;
+    height: 24px;
+    background-color: white;
+    margin: 10px 0 0 10px;
+    border-radius: 6px;
+    text-align: center;
+    opacity: 1;
+}
+.zhuTiXiaBianHua p span{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    color: red;
+}
+.ZTXDIV1:hover .zhuTiXiaBianHua{
+    display: block;
+}
+.ZTXDIV2{
+    margin: 0 auto;
+    position: relative;
+}
+.ZTXDIV2 div:first-child{
+    overflow: hidden;
+}
+.ZTXDIV2 div:first-child img{
+    float: left;
+}
+.zhuTiXiaUl2Li1 .ZTXDIV2{
+    width: 214px;
+    height: 387px;
+}
+.zhuTiXiaUl2Li2 .ZTXDIV2{
+    width: 139px;
+    height: 188px;
+}
+.ZTXDIV3 div{
+    position: absolute;
+    bottom:10px;
+    left: 0;
+    overflow: hidden;
+}
+.ZTXDIV3 div a{
+    display: inline-block;
+    font-size: 12px;
+    color: rgb(156,156,156);
+    margin-right: 10px;
+    float: left;
+}
+.ZTXDIV1:hover{
+    border: solid 1px red;
+}
+.ZTXDIV3 strong{
+    display: block;
+    color:red;
+    font-weight:700;
+    padding-top: 5px;
+}
+.zhuTiXiaUl2Li1 strong{
+    font-size: 16px;
+}
+.zhuTiXiaUl2Li2 strong{
+    font-size: 14px;
+}
+.ZTXDIV3 p{
+    color: rgb(156,156,156);
+    font-size: 12px;
+    padding: 5px 0 10px 0;
+}
+.ZTXDIV3 p span{
+    display: inline-block;
+    background-color: rgb(141,192,77);
+    color: white;
+    padding: 1px 2px;
+}
+.ZTXDIV3 em{
+    color: rgb(108,108,108);
+    font-size: 12px;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+.zhuTiXiaWei{
+    overflow: hidden;
+}
+.zhuTiXiaWei div{
+    border:solid 1px #e8e8e8;
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+.zhuTiXiaWei div:hover{
+    border:solid 1px red;
+}
+.zhuTiXiaWei img{
+    padding: 10px 0 ;
+}
+
+
+
+/*zhuTiXia第二部分*/
+.zhuTiXia2{
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.zhuTiXia2-Tou{
+    text-align: center;
+    padding: 10px;
+}
+.zhuTiXia2-Tou div{
+    display: inline-block;
+    overflow: hidden;
+}
+.zhuTiXia2-Tou img{
+    float: left;
+}
+.zhuTiXia2-Tou span{
+    width: 100px;
+    background-color:rgb(231,231,231);
+    height: 2px;
+    display: inline-block;
+    line-height: 20px;
+    margin: 8px 0;
+}
+.zhuTiXia2-Tou h3{
+    float: left;
+}
+.zhuTiXia2-Tou p{
+    text-align: center;
+    color:#999;
+    font-size: 12px;
+}
+
+
+/*主體下的第二部分*/
+.zhuTiXia2 ul{
+    margin: 10px 10px;
+    overflow:hidden;
+}
+.zhuTiXia2 ul li{
+    background-color:rgb(245,245,245);
+    margin: 0 5px;
+    float:left;
+    width: 222px;
+    height: 302px;
+    border: solid 1px #e8e8e8;
+    position:relative;
+}
+.zhuTiXia2 a{
+    color: rgb(110,110,110);
+}
+/* div yu img 是为了消除上下间隙*/
+.ZTX2DIV1{
+    overflow: hidden;
+}
+.ZTX2DIV1 img{
+    float:left;
+}
+.ZTX2DIV2 p{
+    font-size: 12px;
+    padding: 3px 12px;
+    height: 36px;
+}
+.ZTX2DIV2 div{
+    padding: 0 12px;
+    margin-top:8px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+}
+.ZTX2DIV2 em{
+    font-size: 16px;
+    font-weight:700;
+    color: red;
+    font-style: normal;
+    float: left;
+    overflow: hidden;
+    display: inline-block;
+}
+.ZTX2DIV2 img{
+    padding: 5px 0;
+    float: left;
+}
+.ZTX2DIV2 span{
+    font-size: 12px;
+    float: right;
+}
+.ZTX2DIV3{
+    background-color: #F40;
+    text-align:center;
+    color:white;
+    position:absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 82px;
+    display:none;
+}
+.ZTX2DIV3 h3{
+    width: 120px;
+    margin: 0 auto;
+    padding: 15px 0 5px 0;
+    border-bottom: solid 1px #e56592;
+}
+.ZTX2DIV3 p{
+    font-size: 12px;
+    padding-top: 5px;
+}
+.zhuTiXia2 ul li:hover{
+    border: solid 1px red;
+    transition: 0.5s;
+}
+.zhuTiXia2 ul li:hover .ZTX2DIV1 img{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.zhuTiXia2 ul li:hover .ZTX2DIV3{
+   /* transition: 1s;/*为什么没有用呢？*/
+    display:block;
+}
+
+
+
+
+
+
+/*尾巴部分*/
+.wei{
+    width: 1190px;
+    margin: 0 auto;
+}
+.wei a{
+    color: rgb(108,108,108);
+    font-size: 14px;
+}
+.wei1{
+    overflow:hidden;
+    margin-top: 30px;
+    padding-bottom: 40px;
+    border-bottom: solid 2px red;
+}
+.wei1 div{
+    width: 20%;
+    float:left;
+    padding: 0 25px;
+}
+.wei1 h3{
+    overflow: hidden;
+    height: 48px;
+    line-height: 48px;
+    display: inline-block;
+}
+.wei1 h3 img{
+    float: left;
+    padding-right: 5px;
+}
+.wei1 ul{
+    overflow:hidden;
+}
+.wei1 li{
+    float:left;
+    margin-right: 10px;
+    line-height: 21px;
+}
+.wei1 span{
+    color: rgb(153,153,153);
+    font-size: 14px;
+}
+.wei1 li:hover span{
+    color: red;
+}
+
+
+
+
+.wei2{
+    font-size: 14px;
+    overflow: hidden;
+    line-height: 27px;
+    margin: 20px 0 10px 0;
+    padding-bottom: 10px;
+    border-bottom: solid 1px rgb(221,221,221);
+}
+.wei2 a{
+    display: inline-block;
+    overflow: hidden;
+    float: left;
+}
+.wei2 a span{
+    float: left;
+    margin: 0 4px;
+}
+.wei2 a:hover span{
+    color: red;
+}
+
+
+
+
+.wei3{
+    font-size: 14px;
+    margin: 10px 0;
+}
+.wei3 p{
+  padding: 5px 0;
+}
+.wei3p1{
+    overflow: hidden;
+}
+.wei3p1 a{
+    display: inline-block;
+    float: left;
+}
+.wei3p1 span{
+    margin: 0 4px;
+    line-height: 20px;
+}
+.wei3p1 span:hover{
+    color: red;
+}
+.wei3p1 em{
+    font-style: normal;
+    float: left;
+    color: rgb(160,160,160);
+    line-height: 20px;
+    margin-left: 50px;
+}
+
+
+.wei3p2 span{
+    font-size: 12px;
+    color: rgb(160,160,160);
+}
+.wei3p2 a{
+    color: rgb(108,108,108);
+}
+.wei3p2 a:hover{
+    color: red;
+}
+
+.wei4{
+    padding-bottom: 30px;
+}
+.wei4 img{
+    margin: 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

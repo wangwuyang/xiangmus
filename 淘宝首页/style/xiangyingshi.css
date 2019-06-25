@@ -1,0 +1,93 @@
+
+
+@media screen and (max-width :1270px) {
+    .fu .zhuti1-guanggao{
+        display: none;
+    }
+    .fu .zhutiwai{
+        width: 90%;
+        margin:0 auto;
+    }
+    .fu .zhutiwai #zhuti{
+        width: 740px;
+    }
+
+    .zhuti2{
+        width: 734px;
+    }
+    .zhuti2 .ZhuTi2AYou div:nth-child(3), .zhuti2 .ZhuTi2AYou div:nth-child(4),
+    .zhuti2 .ZhuTi2AYou div:nth-child(6), .zhuti2 .ZhuTi2AYou div:nth-child(7){
+        display: none;
+    }
+    .zhuti2 .ZhuTi2AYou{
+        width: 201px;
+    }
+    .zhuti2 .ZhuTi2A{
+        margin: 2px 25px;
+    }
+    .zhuti2 .zhuTi2Tou,
+    .zhuti2 .zhuTi3Tou,
+    .zhuti2 .zhuTi4Tou,
+    .zhuti2 .zhuTi5Tou,
+    .zhuti2 .zhuTi6Tou{
+        margin: 10px 0 5px 200px;
+    }
+
+    .zhuTi5NR4,.zhuTi5NR8{
+        display: none;
+    }
+
+    .zhuTi6Ul1{
+        display: none;
+    }
+
+    .zhuTi3NR:nth-child(4){
+        display: none;
+    }
+    .zhuTi4NR:nth-child(4),.zhuTi4NR:nth-child(8){
+        display: none;
+    }
+
+
+    .fu .zhuTiXia{
+        width: 960px;
+    }
+    .fu .wei{
+        width: 960px;
+    }
+    .wei1 div{
+        padding: 0 1%;
+    }
+}
+
+
+@media screen and (max-width :1162px){
+    .fu .zhutiwai #zhuti{
+        /*width: 600px;*/
+    }
+    .zhuti1 .zhuTi1Xia ul li{
+        width: 25%;
+    }
+    .zhuti1 .zhuTi1Xia ul li:nth-child(5){
+        display: none;
+    }
+    .fu #lunBoTu1,.fu #lunBoTu2{
+     /*   width: 400px;*/
+    }
+
+}
+
+@media screen and (max-width :1135px){
+    #jing #shoujitaobao{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width :1024px){
+    .fu .zhutiwai{
+        width: 98%;
+        margin: 0 auto;
+    }
+}

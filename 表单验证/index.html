@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+    <style>
+
+        /*常用css样式设置*/
+        *{padding:0;margin:0;}                              /*所有元素padding和margin的默认边距设为0*/
+        html{font-size: 62.5%;background-color: white;} /*默认字体大小设为原本的62.5%,即10px 背景颜色设为白色*/
+        ul,li{list-style: none;}                           /*取消ul,li的默认样式：点*/
+        a{text-decoration: none;color: black;}           /*取消默认样式：下划线；默认颜色设为黑色*/
+        h1,h2,h3,h4,h5,h6{padding: 20px 0;text-align: center;}
+        em{}b{}i{}strong{}span{}
+        /*h5语义化ing*/
+        header{}/*头部*/
+        article{}/* 定义文章*/
+        aside{}/*定义页面内容外部的内容 */
+        section{}
+
+
+        /*常用class设定*/
+        .WaiKe{width: 100%;background-color: rgba(250,250,250,1);color: black;font-size: 1.6rem;}
+        .Fu{width:90%;min-width: 320px;margin: 0 auto;}
+        .NeiRong{background-color: rgba(100,100,0,1);padding:300px 0;}
+        .BiaoDan1{width:50000px;max-width:500px;margin: 0 auto;background-color: rgba(200,200,200,1);padding: 10px;}
+        .BiaoDan1 p{height: 30px;line-height: 30px;margin: 4px 0;}
+        .BiaoDan1 p input{padding: 4px 4px;display: inline;height: 20px;border-radius:4px;margin: 1px 0;color: rgba(100,100,100,1);border: none;}
+        .BiaoDan1 p i{padding:0 4px;}
+        .BiaoDan1 p strong{padding: 0 10px;min-width: 100px;}
+
+        .BiaoDan1 p{overflow: hidden;}
+        .BiaoDan1 p input,.BiaoDan1 p strong,.BiaoDan1 p i{float: left;}
+
+        .BiaoDan1_TiJiao{margin: 30px auto;padding: 10px 20px;display: block;background-color: rgba(0,0,10,1);border: none;border-radius: 5px;color: white;font-size: 2rem;cursor: pointer;}
+
+        .BiaoDan1 .BiaoDan1_YS_Hei{color: rgba(0,0,0,1);}/*js改变样式用*//*增加下权重*/
+        .BiaoDan1 span{color: red;font-size: 1.4rem;}
+
+        /*去掉自带边框*/
+        input,button,select,textarea{outline:none}
+       /* textarea{resize:none}*/
+
+/*阿里巴巴字体图标*/
+        @font-face {font-family: "iconfont";
+            src: url('iconfont.eot?t=1498811874478'); /* IE9*/
+            src: url('iconfont.eot?t=1498811874478#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('iconfont.woff?t=1498811874478') format('woff'), /* chrome, firefox */
+            url('iconfont.ttf?t=1498811874478') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+            url('iconfont.svg?t=1498811874478#iconfont') format('svg'); /* iOS 4.1- */
+        }
+        .iconfont {
+            font-family:"iconfont" !important;
+            font-size:16px;
+            font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .icon-xinghao:before { content: "\e603";color: red;}
+    </style>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_npo02s7yw9rizfr.css"><!--引入字体图标class方法-->
+
+
+
+
+</head>
+<body>
+    <div class="WaiKe">
+        <div class="Fu">
+            <div class="NeiRong">
+                <form class="BiaoDan1">
+                    <div id="BiaoDan1_Div">
+                        <p>
+                            <strong>请输入姓名:</strong>
+                            <input id="XingMing_input" type="text" name="BD1_XingMing" value="请输入姓名">
+                            <i class="iconfont icon-xinghao"></i>
+                            <span id="XingMing_span">由2至4位的纯汉字组成</span>
+                        </p>
+                        <p>
+                            <strong>请输入手机号:</strong>
+                            <input id="ShouJiHao_input" type="text" name="BD1_ShouJiHao" value="请输入手机号">
+                            <i class="iconfont icon-xinghao"></i>
+                            <span id="ShouJiHao_span">由11位纯数字组成</span>
+                        </p>
+                        <p>
+                            <strong>请输入邮箱:</strong>
+                            <input id="YouXiang_input" type="text" name="BD1_YouXiang" value="请输入邮箱">
+                            <i class="iconfont icon-xinghao"></i>
+                            <span id="YouXiang_span">请输入邮箱</span>
+                        </p>
+                        <p>
+                            <strong>请输入性别:</strong>
+                            <input id="XingBie_input" type="text" name="BD1_XingBie" value="请输入性别">
+                            <i class="iconfont icon-xinghao"></i>
+                            <span id="XingBie_span">请输入汉字</span>
+                        </p>
+                        <p>
+                            <strong>请输入年龄:</strong>
+                            <input id = "NianLing_input" type="text" name="BD1_NianLing" value="请输入年龄">
+                            <i class="iconfont icon-xinghao"></i>
+                            <span id = "NianLing_span">由1—3位纯数字组成</span>
+                        </p>
+                    </div>
+                    <input class="BiaoDan1_TiJiao" type="submit" name="BD1_BiaoDan1TiJiao">
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script src="js.js"></script><!--表单验证部分的js-->
+</body>
+</html>

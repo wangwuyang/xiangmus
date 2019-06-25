@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <script type="text/javascript">
+        var hanshu1 = function(){
+            var inputs = document.getElementsByTagName("input");
+            for(var i=0; i<inputs.length; i++){
+                var a = "input1";
+                if(a.indexOf(inputs[i].className)== -1) {
+                    continue;
+                }
+                var b = inputs[i];
+                //input获得焦点后
+                b.onfocus = function() {
+                    if (this.value == this.defaultValue) {
+                        this.value = "";
+                        this.className = "input2";
+                    }
+                };
+                //input失去焦点后
+                b.onblur = function() {
+                    if (this.value == "") {
+                        this.value = this.defaultValue;
+                        this.className = "input1";
+                    }
+                }
+            }
+        };
+
+         function gongxiangonload(func){
+             var laohanshu=window.onload;
+             if(typeof window.onload !='function'){
+                 window.onload = func;
+                 }
+             else{
+                 window.onload = function(){
+                     laohanshu();
+                     func();
+                 }
+             }
+         }
+        gongxiangonload(hanshu1);
+    </script>
+    <style>
+        .input1{color:#878787;}
+        .input2{color:#444;}
+    </style>
+</head>
+
+<body>
+<input name="text2" type="text"  class="input1" value="搜一下问题来回答"/>
+</body>
+</html>
